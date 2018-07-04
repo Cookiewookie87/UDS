@@ -2,18 +2,16 @@ html, body, ul, li {
     margin: 0px;
     padding: 0px;
 }
-nav {
+header {
     background: red;
-}
-
-nav ul {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-items: center;
+    justify-content: space-between;
 }
-
 li {
+    display:inline;
     list-style-type: none;
-    text-decoration: none;
+    margin-right: 0;
 }
