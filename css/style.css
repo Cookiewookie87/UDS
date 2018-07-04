@@ -1,0 +1,19 @@
+html, body, ul, li {
+    margin: 0px;
+    padding: 0px;
+}
+nav {
+    background: red;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+li {
+    list-style-type: none;
+    text-decoration: none;
+}
