@@ -3,15 +3,156 @@ html, body, ul, li {
     padding: 0px;
 }
 header {
-    background: red;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     align-items: center;
     justify-items: center;
-    justify-content: space-between;
+    grid-gap: 20px;
+    
 }
+
+header img{
+    width: 185px;
+    height: 77px;
+}
+
+.bg {
+    min-height: 100%;
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.logo{
+    display: grid;
+    align-content: start;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
 li {
-    display:inline;
+    display: inline;
     list-style-type: none;
-    margin-right: 0;
+    align-content: end;
+    padding: 5px;
+    text-align: center;
+}
+
+li:hover{
+    background: red;
+    
+}
+
+ul {
+    display: grid; 
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+}
+
+
+
+
+
+
+
+
+
+.style {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5%;
+    align-items: center;
+    justify-items: center;
+    border: 1px solid black;
+    
+}
+
+.styles{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    
+}
+
+
+
+.schedule1{
+    
+}
+
+.schedule2 {
+    display: none;
+}
+.schedule_wrap {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(100px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.sch {
+    border: 1px solid black;
+    width: auto;
+    height: 150px;
+    margin: 20px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.sch_day{
+    text-align: center;
+    background: none;
+    height: auto;
+    border: none;
+}
+
+.hour{
+    color: red;
+}
+
+
+.team {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin: 20px 0px;
+}
+
+.members{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    border: 1px solid black;
+    padding: 0 5%;
+    
+
+}
+
+.members p{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.members img{
+    width: 200px;
+    height: 200px;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    align-items: center;
+    justify-items: center;
+    border: 1px solid black;
 }
