@@ -14,6 +14,12 @@ const dot2 = document.querySelector(".dot-2");
 const dot3 = document.querySelector(".dot-3");
 let startImgIndex = 0;
 let currentIndex = 0;
+// for touch devices (carousel navigate)
+const gestureZone = document.querySelector('.img-wrap');
+let touchstartX = 0;
+let touchstartY = 0;
+let touchendX = 0;
+let touchendY = 0;
 
 // navigation functions
 function toggleNav() {
@@ -103,16 +109,34 @@ function toggleDotActive(currentIndex) {
     }
 }
 
+// for touch devices function (carousel navigate)
+function handleGesture() {
+    if (touchendX <= touchstartX) {
+        nextImgShow();
+    }
+    
+    if (touchendX >= touchstartX) {
+        previousImgShow();
+    }
+}
+
 // navigation events
 navigationToggleButton.addEventListener("click", toggleNav);
 navigationList.forEach(item => item.addEventListener("click", navLink));
-
 // background image event
-nextImgBtn.addEventListener("click", nextImgShow)
-
+nextImgBtn.addEventListener("click", nextImgShow);
 previousImgBtn.addEventListener("click", previousImgShow);
 imgDotBtn.forEach(btn => btn.addEventListener("click", dotBtnNavigate));
-
+// for touch devices events (carousel navigate)
+gestureZone.addEventListener('touchstart', function(event) {
+    touchstartX = event.changedTouches[0].screenX;
+    touchstartY = event.changedTouches[0].screenY;
+}, false);
+gestureZone.addEventListener('touchend', function(event) {
+    touchendX = event.changedTouches[0].screenX;
+    touchendY = event.changedTouches[0].screenY;
+    handleGesture();
+}, false); 
 
 
 
