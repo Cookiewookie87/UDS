@@ -84,16 +84,13 @@ ul {
 
 
 
-.schedule1{
-    
-}
 
 .schedule2 {
     display: none;
 }
 .schedule_wrap {
     display: grid;
-    grid-template-columns: repeat(7, minmax(100px, 1fr));
+    grid-template-columns: repeat(7, minmax(10%, 1fr));
     grid-gap: 20px;
     padding: 20px;
     border: 1px solid black;
@@ -101,8 +98,6 @@ ul {
 
 .sch {
     border: 1px solid black;
-    width: auto;
-    height: 150px;
     margin: 20px;
     display: grid;
     align-items: center;
@@ -124,16 +119,19 @@ ul {
 
 .team {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    margin: 20px 0px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
 }
 
 .members{
     display: grid;
-    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5%;
+    align-items: center;
+    justify-items: center;
     border: 1px solid black;
-    padding: 0 5%;
     
 
 }
@@ -151,8 +149,51 @@ ul {
 
 footer{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
     align-items: center;
     justify-items: center;
     border: 1px solid black;
 }
+
+.menu_btn{
+    display: none;
+}
+
+@media(max-width:1054px) {
+    .schedule1 {
+        display: none;
+    }
+    .schedule2 {
+        display: block;
+    }
+
+    .schedule_wrap {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(10%, 1fr));
+        grid-gap: 20px;
+        padding: 20px;
+    }
+}
+
+@media(max-width:438px) {
+    .team, .styles {
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    }
+}
+
+@media(max-width:564px) {
+    .big_menu {
+        display: none;
+    }
+
+    .menu_btn {
+        display: block;
+    }
+}
+
+
+.wrapper{
+    max-width: 1440px;
+     margin: 0 auto;
+}
+
