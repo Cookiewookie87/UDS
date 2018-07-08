@@ -7,7 +7,7 @@ const backgroundImgDiv = document.querySelector(".bg");
 const previousImgBtn = document.querySelector(".prev");
 const nextImgBtn = document.querySelector(".next");
 const imgDotBtn = Array.from(document.querySelectorAll(".dot"));
-const arrImg = ['url("../img/0.jpg")', 'url("../img/1.jpg")', 'url("../img/2.jpg")', 'url("../img/3.jpg")'];
+const arrImg = ['url("img/0.jpg")', 'url("img/1.jpg")', 'url("img/2.jpg")', 'url("img/3.jpg")'];
 const dot0 = document.querySelector(".dot-0");
 const dot1 = document.querySelector(".dot-1");
 const dot2 = document.querySelector(".dot-2");
@@ -108,8 +108,7 @@ navigationToggleButton.addEventListener("click", toggleNav);
 navigationList.forEach(item => item.addEventListener("click", navLink));
 
 // background image event
-nextImgBtn.addEventListener("click", nextImgShow);
-nextImgBtn.addEventListener("click", resetSlideshowTimer);
+nextImgBtn.addEventListener("click", nextImgShow)
 
 previousImgBtn.addEventListener("click", previousImgShow);
 imgDotBtn.forEach(btn => btn.addEventListener("click", dotBtnNavigate));
