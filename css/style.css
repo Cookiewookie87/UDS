@@ -1,0 +1,150 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/*----NAVIGATION----*/
+nav{
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    z-index: 1;
+}
+.nav-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+#logo {
+    height: 70px;
+}
+.navigation li {
+    display:inline;
+    list-style-type: none;
+    margin-right: 30px;
+}
+.navigation li:last-child {
+    margin-right: 0;
+}
+.navigation li a {
+    padding: 5px 10px;
+    transition: 0.3s;
+    color: red;
+    background-color: white;
+    text-decoration: none;
+}
+.navigation a:hover {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 5px 10px;
+}
+.navigation-toggle .fa-bars {
+    color: red;
+    font-size: 30px;
+    padding: 10px;
+    text-align: right;
+    display: none;
+}
+
+/*----PICTURE CAROUSEL----*/
+.img-wrap {
+    width: 100%;
+    height: 100%;
+}
+.bg {
+    background-image: url("../img/0.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+.dot-wrap {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .dot-active {
+    background-color: green;
+  }
+
+@media screen and (max-width: 600px) {
+    /*----NAVIGATION MOBILE---*/
+    .navigation-toggle .fa-bars {
+        display: inline;
+    }
+    .navigation {
+        display: none;
+        position: absolute;
+        top: 74px;
+        width: 100%;
+    }
+    .navigation {
+        background-color: rgba(224, 26, 26, 0.9);
+    }
+    .navigation li {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-right: 0;
+        border-bottom: 1px solid red;
+    }
+    .navigation li a {
+        padding: 30px 0;
+        background-color: transparent;
+        color: white;
+    }
+    .nav-wrap ul {
+        margin: 0;
+        padding: 0;
+    }
+    .active {
+        display: block;
+    }
+}
