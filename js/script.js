@@ -25,14 +25,12 @@ function navLink() {
 // background image functions
 function nextImgShow() {
     startImgIndex++;
-    if (startImgIndex === imgDotBtn.length) {
+    if (startImgIndex === arrImg.length) {
         startImgIndex = 0;
     }
     currentIndex = startImgIndex;
     backgroundImgDiv.style.backgroundImage = arrImg[startImgIndex];
-    if (startImgIndex + 1 >= arrImg.length) {
-        startImgIndex = -1;
-    }
+
     toggleDotActive(currentIndex);
 }
 function previousImgShow() {
@@ -42,9 +40,6 @@ function previousImgShow() {
     }
     currentIndex = startImgIndex;
     backgroundImgDiv.style.backgroundImage = arrImg[startImgIndex];
-    if (startImgIndex <= 0) {
-        startImgIndex = arrImg.length;
-    }
     toggleDotActive(currentIndex);
 }
 
