@@ -19,9 +19,11 @@ let currentIndex = 0;
 function toggleNav() {
     navigation.classList.toggle("active");
 }
+ 
 function navLink() {
     navigation.classList.remove("active");
 }
+
 // background image functions
 function nextImgShow() {
     startImgIndex++;
@@ -30,9 +32,9 @@ function nextImgShow() {
     }
     currentIndex = startImgIndex;
     backgroundImgDiv.style.backgroundImage = arrImg[startImgIndex];
-
     toggleDotActive(currentIndex);
 }
+
 function previousImgShow() {
     startImgIndex--;
     if (startImgIndex === -1) {
