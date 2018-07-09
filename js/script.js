@@ -110,7 +110,12 @@ nextImgBtn.addEventListener("click", nextImgShow)
 previousImgBtn.addEventListener("click", previousImgShow);
 imgDotBtn.forEach(btn => btn.addEventListener("click", dotBtnNavigate));
 
-
+// for touch devices (carousel navigate)
+const gestureZone = document.querySelector('.img-wrap');
+let touchstartX = 0;
+let touchstartY = 0;
+let touchendX = 0;
+let touchendY = 0;
 
 
 
