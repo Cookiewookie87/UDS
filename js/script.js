@@ -47,26 +47,21 @@ function previousImgShow() {
 
 function dotBtnNavigate() { 
     if (this.classList.contains("dot-0")) {
-        backgroundImgDiv.style.backgroundImage = arrImg[0];
-        startImgIndex = 0;
-        currentIndex = 0;
-        toggleDotActive(currentIndex);
+        dotBtnSet(0);
     } else if (this.classList.contains("dot-1")) {
-        backgroundImgDiv.style.backgroundImage = arrImg[1];
-        startImgIndex = 1;
-        currentIndex = 1;
-        toggleDotActive(currentIndex);
+        dotBtnSet(1);
     } else if (this.classList.contains("dot-2")) {
-        backgroundImgDiv.style.backgroundImage = arrImg[2];
-        startImgIndex = 2;
-        currentIndex = 2;
-        toggleDotActive(currentIndex);
+        dotBtnSet(2);
     } else if (this.classList.contains("dot-3")) {
-        backgroundImgDiv.style.backgroundImage = arrImg[3];
-        startImgIndex = 3;
-        currentIndex = 3;
-        toggleDotActive(currentIndex);
+        dotBtnSet(3);
     }
+}
+
+function dotBtnSet (number) {
+    backgroundImgDiv.style.backgroundImage = arrImg[number];
+    startImgIndex = number;
+    currentIndex = number;
+    toggleDotActive(currentIndex);
 }
 
 function toggleDotActive(currentIndex) {
@@ -131,15 +126,18 @@ function handleGesture() {
 // navigation events
 navigationToggleButton.addEventListener("click", toggleNav);
 navigationList.forEach(item => item.addEventListener("click", navLink));
+
 // background image event
 nextImgBtn.addEventListener("click", nextImgShow);
 previousImgBtn.addEventListener("click", previousImgShow);
 imgDotBtn.forEach(btn => btn.addEventListener("click", dotBtnNavigate));
+
 // for touch devices events (carousel navigate)
 gestureZone.addEventListener('touchstart', function(event) {
     touchstartX = event.changedTouches[0].screenX;
     touchstartY = event.changedTouches[0].screenY;
 }, false);
+
 gestureZone.addEventListener('touchend', function(event) {
     touchendX = event.changedTouches[0].screenX;
     touchendY = event.changedTouches[0].screenY;
