@@ -117,5 +117,33 @@ let touchstartY = 0;
 let touchendX = 0;
 let touchendY = 0;
 
+// for touch devices function (carousel navigate)
+function handleGesture() {
+    if (touchendX <= touchstartX) {
+        nextImgShow();
+    }
+    
+    if (touchendX >= touchstartX) {
+        previousImgShow();
+    }
+}
+
+// navigation events
+navigationToggleButton.addEventListener("click", toggleNav);
+navigationList.forEach(item => item.addEventListener("click", navLink));
+// background image event
+nextImgBtn.addEventListener("click", nextImgShow);
+previousImgBtn.addEventListener("click", previousImgShow);
+imgDotBtn.forEach(btn => btn.addEventListener("click", dotBtnNavigate));
+// for touch devices events (carousel navigate)
+gestureZone.addEventListener('touchstart', function(event) {
+    touchstartX = event.changedTouches[0].screenX;
+    touchstartY = event.changedTouches[0].screenY;
+}, false);
+gestureZone.addEventListener('touchend', function(event) {
+    touchendX = event.changedTouches[0].screenX;
+    touchendY = event.changedTouches[0].screenY;
+    handleGesture();
+}, false);
 
 
