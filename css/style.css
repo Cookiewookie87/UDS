@@ -120,7 +120,7 @@ nav{
   .style {
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     padding: 5%;
     align-items: center;
     justify-items: center;
@@ -130,17 +130,44 @@ nav{
 
 .styles{
     display: grid;
-    grid-template-columns: repeat(2, minmax(400px, 1fr));
+    grid-template-areas: 
+        "a a b"
+        "c d e";
     grid-gap: 20px;
     padding: 20px;
     
 }
 
+.hiphop{
+    grid-area: a;
+}
+
+.jazz{
+    grid-area: b;
+}
+
+.balet{
+    grid-area: e;
+}
+
+.break{
+    grid-area: c;
+}
+
+.kids{
+    grid-area: d;
+}
+
 .kids {
     display: grid;
-    align-items: center;
-    justify-items: center;  
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: minmax(50%, 1fr);
 }
+
+
+
+
 
 @media screen and (max-width: 600px) {
     /*----NAVIGATION MOBILE---*/
@@ -180,6 +207,14 @@ nav{
 
     .active {
         display: block;
+    }
+    .styles {
+        grid-template-areas: 
+        "a"
+        "b"
+        "c"
+        "d"
+        "e" ;
     }
 
 }
