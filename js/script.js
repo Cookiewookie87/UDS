@@ -19,22 +19,25 @@ let currentIndex = 0;
 function toggleNav() {
     navigation.classList.toggle("active");
 }
+ 
 function navLink() {
     navigation.classList.remove("active");
 }
+
 // background image functions
 function nextImgShow() {
     startImgIndex++;
-    if (startImgIndex === imgDotBtn.length) {
+    if (startImgIndex === arrImg.length) {
         startImgIndex = 0;
     }
     currentIndex = startImgIndex;
     backgroundImgDiv.style.backgroundImage = arrImg[startImgIndex];
-    if (startImgIndex + 1 >= arrImg.length) {
-        startImgIndex = -1;
-    }
     toggleDotActive(currentIndex);
+    clearInterval(interval);
+    interval = setInterval(nextImgShow, 2000);
+    
 }
+
 function previousImgShow() {
     startImgIndex--;
     if (startImgIndex === -1) {
@@ -42,34 +45,31 @@ function previousImgShow() {
     }
     currentIndex = startImgIndex;
     backgroundImgDiv.style.backgroundImage = arrImg[startImgIndex];
-    if (startImgIndex <= 0) {
-        startImgIndex = arrImg.length;
-    }
     toggleDotActive(currentIndex);
+    clearInterval(interval);
+    interval = setInterval(nextImgShow, 2000);
+    
 }
 
 function dotBtnNavigate() { 
     if (this.classList.contains("dot-0")) {
-        backgroundImgDiv.style.backgroundImage = arrImg[0];
-        startImgIndex = 0;
-        currentIndex = 0;
-        toggleDotActive(currentIndex);
+        dotBtnSet(0);
     } else if (this.classList.contains("dot-1")) {
-        backgroundImgDiv.style.backgroundImage = arrImg[1];
-        startImgIndex = 1;
-        currentIndex = 1;
-        toggleDotActive(currentIndex);
+        dotBtnSet(1);
     } else if (this.classList.contains("dot-2")) {
-        backgroundImgDiv.style.backgroundImage = arrImg[2];
-        startImgIndex = 2;
-        currentIndex = 2;
-        toggleDotActive(currentIndex);
+        dotBtnSet(2);
     } else if (this.classList.contains("dot-3")) {
-        backgroundImgDiv.style.backgroundImage = arrImg[3];
-        startImgIndex = 3;
-        currentIndex = 3;
-        toggleDotActive(currentIndex);
+        dotBtnSet(3);
     }
+}
+
+function dotBtnSet (number) {
+    backgroundImgDiv.style.backgroundImage = arrImg[number];
+    startImgIndex = number;
+    currentIndex = number;
+    toggleDotActive(currentIndex);
+    clearInterval(interval);
+    interval = setInterval(nextImgShow, 2000);
 }
 
 function toggleDotActive(currentIndex) {
@@ -113,7 +113,44 @@ nextImgBtn.addEventListener("click", nextImgShow)
 previousImgBtn.addEventListener("click", previousImgShow);
 imgDotBtn.forEach(btn => btn.addEventListener("click", dotBtnNavigate));
 
+// for touch devices (carousel navigate)
+const gestureZone = document.querySelector('.img-wrap');
+let touchstartX = 0;
+let touchstartY = 0;
+let touchendX = 0;
+let touchendY = 0;
 
+// for touch devices function (carousel navigate)
+function handleGesture() {
+    if (touchendX <= touchstartX) {
+        nextImgShow();
+    }
+    
+    if (touchendX >= touchstartX) {
+        previousImgShow();
+    }
+}
 
+var interval = setInterval(nextImgShow, 2000);
+// navigation events
+navigationToggleButton.addEventListener("click", toggleNav);
+navigationList.forEach(item => item.addEventListener("click", navLink));
+
+// background image event
+nextImgBtn.addEventListener("click", nextImgShow);
+previousImgBtn.addEventListener("click", previousImgShow);
+imgDotBtn.forEach(btn => btn.addEventListener("click", dotBtnNavigate));
+
+// for touch devices events (carousel navigate)
+gestureZone.addEventListener('touchstart', function(event) {
+    touchstartX = event.changedTouches[0].screenX;
+    touchstartY = event.changedTouches[0].screenY;
+}, false);
+
+gestureZone.addEventListener('touchend', function(event) {
+    touchendX = event.changedTouches[0].screenX;
+    touchendY = event.changedTouches[0].screenY;
+    handleGesture();
+}, false);
 
 
