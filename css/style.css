@@ -164,15 +164,16 @@ nav{
     justify-content: center;
     grid-template-columns: minmax(50%, 1fr);
 }
+ /*----STYLES END----*/
 
-
+/*----SCHEDULE----*/
 .schedule2 {
     display: none;
 }
+
 .schedule_wrap {
     display: grid;
-    grid-template-columns: repeat(7, minmax(10%, 1fr));
-    grid-gap: 20px;
+    grid-template-columns: repeat(6, minmax(10%, 1fr));
     padding: 20px;
     border: 1px solid black;
 }
@@ -196,6 +197,8 @@ nav{
 .hour{
     color: red;
 }
+
+/*----SCHEDULE END----*/
 
 
 
@@ -249,4 +252,21 @@ nav{
         "e" ;
     }
 
+}
+
+/*----SCHEDULE BREAKPOINT----*/
+@media(max-width:1054px) {
+    .schedule1 {
+        display: none;
+    }
+    .schedule2 {
+        display: block;
+    }
+
+    .schedule_wrap {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(10%, 1fr));
+        grid-gap: 20px;
+        padding: 20px;
+    }
 }
