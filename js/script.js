@@ -33,6 +33,9 @@ function nextImgShow() {
     currentIndex = startImgIndex;
     backgroundImgDiv.style.backgroundImage = arrImg[startImgIndex];
     toggleDotActive(currentIndex);
+    clearInterval(interval);
+    interval = setInterval(nextImgShow, 2000);
+    
 }
 
 function previousImgShow() {
@@ -43,6 +46,9 @@ function previousImgShow() {
     currentIndex = startImgIndex;
     backgroundImgDiv.style.backgroundImage = arrImg[startImgIndex];
     toggleDotActive(currentIndex);
+    clearInterval(interval);
+    interval = setInterval(nextImgShow, 2000);
+    
 }
 
 function dotBtnNavigate() { 
@@ -62,6 +68,8 @@ function dotBtnSet (number) {
     startImgIndex = number;
     currentIndex = number;
     toggleDotActive(currentIndex);
+    clearInterval(interval);
+    interval = setInterval(nextImgShow, 2000);
 }
 
 function toggleDotActive(currentIndex) {
@@ -123,6 +131,7 @@ function handleGesture() {
     }
 }
 
+var interval = setInterval(nextImgShow, 2000);
 // navigation events
 navigationToggleButton.addEventListener("click", toggleNav);
 navigationList.forEach(item => item.addEventListener("click", navLink));
