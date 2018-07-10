@@ -76,10 +76,16 @@ ul {
 
 .styles{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(2, minmax(400px, 1fr));
     grid-gap: 20px;
     padding: 20px;
     
+}
+
+.kids {
+    display: grid;
+    align-items: center;
+    justify-items: center;  
 }
 
 
