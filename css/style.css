@@ -166,6 +166,38 @@ nav{
 }
 
 
+.schedule2 {
+    display: none;
+}
+.schedule_wrap {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(10%, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.sch {
+    border: 1px solid black;
+    margin: 20px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.sch_day{
+    text-align: center;
+    background: none;
+    height: auto;
+    border: none;
+}
+
+.hour{
+    color: red;
+}
+
+
 
 
 
