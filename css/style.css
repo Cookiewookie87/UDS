@@ -114,6 +114,34 @@ nav{
     background-color: green;
   }
 
+
+  /*----STYLES----*/
+
+  .style {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5%;
+    align-items: center;
+    justify-items: center;
+    border: 1px solid black;
+    
+}
+
+.styles{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(400px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    
+}
+
+.kids {
+    display: grid;
+    align-items: center;
+    justify-items: center;  
+}
+
 @media screen and (max-width: 600px) {
     /*----NAVIGATION MOBILE---*/
     .navigation-toggle .fa-bars {
