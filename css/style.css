@@ -116,9 +116,8 @@ nav{
 
 
   /*----STYLES----*/
-
+/*
   .style {
-
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     padding: 5%;
@@ -163,6 +162,31 @@ nav{
     align-content: center;
     justify-content: center;
     grid-template-columns: minmax(50%, 1fr);
+}
+
+*/
+
+
+
+.style{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.content{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.pic{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid black;
 }
  /*----STYLES END----*/
 
@@ -251,6 +275,8 @@ nav{
         "d"
         "e" ;
     }
+
+    
 
 }
 
