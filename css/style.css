@@ -1,18 +1,28 @@
+:root {
+    --main-red: #E52D2A;
+}
 html, body {
     height: 100%;
     margin: 0;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 1px;
 }
 .container {
     max-width: 1080px;
     margin: 0 auto;
 }
-
+.buffer {
+    height: 50px;
+    background-color: white;
+    transition: 100ms linear;
+    display: block;
+}
 /*----NAVIGATION----*/
 nav{
     position: fixed;
-    background-color: white;
     width: 100%;
     z-index: 1;
+    background-color: white;
 }
 .nav-wrap {
     display: flex;
@@ -21,9 +31,17 @@ nav{
     justify-items: center;
     justify-content: space-between;
     position: relative;
+    background-color: white;
+    height: 74px;
 }
 #logo {
-    height: 70px;
+    height: 60px;
+    margin-left: 20px;
+    margin-top: 6px;
+}
+.nav-wrap ul {
+    margin-right: 10px;
+    margin-top: 26px;
 }
 .navigation li {
     display:inline;
@@ -34,25 +52,29 @@ nav{
     margin-right: 0;
 }
 .navigation li a {
-    padding: 5px 10px;
+    font-weight: bold;
+    padding: 5px 15px;
     transition: 0.3s;
-    color: red;
+    color: var(--main-red);
     background-color: white;
     text-decoration: none;
 }
 .navigation a:hover {
-    background-color: red;
+    background-color: var(--main-red);
     color: white;
     border: none;
     border-radius: 100px;
-    padding: 5px 10px;
+    padding: 7px 15px;
 }
-.navigation-toggle .fa-bars {
-    color: red;
-    font-size: 30px;
-    padding: 10px;
+.navigation-toggle .fa-bars, .navigation-toggle .fa-times {
+    color: var(--main-red);
+    font-size: 20px;
+    padding: 20px;
     text-align: right;
     display: none;
+}
+.toggle-active {
+    background-color: gray;
 }
 
 /*----PICTURE CAROUSEL----*/
@@ -67,6 +89,8 @@ nav{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    /* TRANSITION */
+    transition: 500ms cubic-bezier(1, 0.03, 0.66, 1.01);
 }
 
 .prev, .next {
@@ -89,7 +113,7 @@ nav{
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(224, 26, 26, 0.9);
 }
 .dot-wrap {
     position: absolute;
@@ -101,17 +125,18 @@ nav{
 }
 .dot {
     cursor: pointer;
-    height: 15px;
-    width: 15px;
+    height: 12px;
+    width: 12px;
     margin: 0 2px;
-    background-color: red;
+    border: 2px solid white;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
   }
 
   .dot-active {
-    background-color: green;
+    background-color: white;
+    transform: scale(1.2);
   }
 
 
@@ -228,29 +253,45 @@ nav{
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 670px) {
     /*----NAVIGATION MOBILE---*/
-    .navigation-toggle .fa-bars {
-        display: inline;
+    .navigation-toggle .fa-bars, .navigation-toggle .fa-times {
+        display: block;
+        margin-top: 13px;
     }
-    
-    .navigation {
+    .buffer {
         display: none;
+    }
+    .navigation a:hover {
+        background-color: var(--main-red);
+        color: white;
+        border: none;
+        border-radius: 100px;
+        padding: 5px 10px;
+    }
+    .navigation a:hover {
+        padding: 30px 0;
+        background-color: transparent;
+        color: white;
+    }
+    .navigation {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(0px, -390px);
         position: absolute;
         top: 74px;
         width: 100%;
+        transition: transform 100ms linear;
     }
-
     .navigation {
         background-color: rgba(224, 26, 26, 0.9);
     }
-
     .navigation li {
         display: flex;
         flex-direction: column;
         text-align: center;
         margin-right: 0;
-        border-bottom: 1px solid red;
+        border-bottom: 1px solid var(--main-red);
     }
 
     .navigation li a {
@@ -266,6 +307,12 @@ nav{
 
     .active {
         display: block;
+        visibility: visible;
+        opacity: 1;
+        transform: translate(0px, 0px);
+        transform: scale(1);
+        position: absolute;
+        z-index: -1;
     }
     .styles {
         grid-template-areas: 

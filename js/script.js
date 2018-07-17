@@ -2,6 +2,10 @@
 const navigation = document.querySelector("ul.navigation");
 const navigationToggleButton = document.querySelector(".navigation-toggle");
 const navigationList = document.querySelectorAll(".navigation a");
+const navigationToggleIcon = navigationToggleButton.querySelector("i");
+const logo = document.getElementById("logo");
+const navWrap = document.querySelector(".nav-wrap ul");
+
 // background image selector
 const backgroundImgDiv = document.querySelector(".bg");
 const previousImgBtn = document.querySelector(".prev");
@@ -15,13 +19,24 @@ const dot3 = document.querySelector(".dot-3");
 let startImgIndex = 0;
 let currentIndex = 0;
 
+
+
 // navigation functions
 function toggleNav() {
     navigation.classList.toggle("active");
+    if (navigationToggleIcon.classList.contains("fa-bars")) { 
+        navigationToggleIcon.classList.remove("fa-bars");
+        navigationToggleIcon.classList.add("fa-times");
+    } else {
+        navigationToggleIcon.classList.add("fa-bars");
+        navigationToggleIcon.classList.remove("fa-times");
+    }
 }
  
 function navLink() {
     navigation.classList.remove("active");
+    navigationToggleIcon.classList.add("fa-bars");
+    navigationToggleIcon.classList.remove("fa-times");
 }
 
 // background image functions
