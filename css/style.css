@@ -151,60 +151,6 @@ nav{
     transform: scale(1.2);
   }
 
-
-  /*----STYLES----*/
-/*
-  .style {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    padding: 5%;
-    align-items: center;
-    justify-items: center;
-    border: 1px solid black;
-    
-}
-
-.styles{
-    display: grid;
-    grid-template-areas: 
-        "a a b"
-        "c d e";
-    grid-gap: 20px;
-    padding: 20px;
-    
-}
-
-.hiphop{
-    grid-area: a;
-}
-
-.jazz{
-    grid-area: b;
-}
-
-.balet{
-    grid-area: e;
-}
-
-.break{
-    grid-area: c;
-}
-
-.kids{
-    grid-area: d;
-}
-
-.kids {
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    grid-template-columns: minmax(50%, 1fr);
-}
-
-*/
-
-
-
 .style{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
