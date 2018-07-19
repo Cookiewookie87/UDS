@@ -307,11 +307,19 @@ nav{
         display: block;
     }
 
+    .schedule_2 h2{
+        padding: 0 5%;
+    }
+
     .schedule_wrap {
         display: grid;
         grid-template-columns: repeat(1, minmax(10%, 1fr));
         grid-gap: 20px;
         padding: 20px;
+    }
+
+    .timetable{
+        padding: 0 5%;
     }
 }
 
