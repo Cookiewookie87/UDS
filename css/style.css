@@ -180,7 +180,7 @@ nav{
  /*----STYLES END----*/
 
 /*----SCHEDULE----*/
-.schedule2 {
+.schedule_2 {
     display: none;
 }
 
@@ -208,6 +208,24 @@ nav{
 }
 
 .hour{
+    color: red;
+}
+
+.timetable{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.dance_style{
+    justify-content: start;
+}
+
+.hour{
+    display: grid;
+    justify-content: end;
+}
+
+.schedule_2 h2 {
     color: red;
 }
 
@@ -285,7 +303,7 @@ nav{
     .schedule1 {
         display: none;
     }
-    .schedule2 {
+    .schedule_2 {
         display: block;
     }
 
