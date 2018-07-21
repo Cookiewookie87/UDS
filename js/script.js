@@ -11,11 +11,21 @@ const backgroundImgDiv = document.querySelector(".bg");
 const previousImgBtn = document.querySelector(".prev");
 const nextImgBtn = document.querySelector(".next");
 const imgDotBtn = Array.from(document.querySelectorAll(".dot"));
-const arrImg = ['url("img/0.jpg")', 'url("img/1.jpg")', 'url("img/2.jpg")', 'url("img/3.jpg")'];
+const arrImg = 
+[
+    'url("img/UDSspletna0_comp_1600.png")', 
+    'url("img/UDSspletna1_comp_1600.png")',
+    'url("img/UDSspletna2_comp_1600.png")', 
+    'url("img/UDSspletna3_comp_1600.png")',
+    'url("img/UDSspletna4_comp_1600.png")',
+    'url("img/UDSspletna5_comp_1600.png")',
+];
 const dot0 = document.querySelector(".dot-0");
 const dot1 = document.querySelector(".dot-1");
 const dot2 = document.querySelector(".dot-2");
 const dot3 = document.querySelector(".dot-3");
+const dot4 = document.querySelector(".dot-4");
+const dot5 = document.querySelector(".dot-5");
 let startImgIndex = 0;
 let currentIndex = 0;
 
@@ -75,6 +85,10 @@ function dotBtnNavigate() {
         dotBtnSet(2);
     } else if (this.classList.contains("dot-3")) {
         dotBtnSet(3);
+    } else if (this.classList.contains("dot-4")) {
+        dotBtnSet(4);
+    } else if (this.classList.contains("dot-5")) {
+        dotBtnSet(5);
     }
 }
 
@@ -94,24 +108,48 @@ function toggleDotActive(currentIndex) {
             dot1.classList.remove("dot-active");
             dot2.classList.remove("dot-active");
             dot3.classList.remove("dot-active");
+            dot4.classList.remove("dot-active");
+            dot5.classList.remove("dot-active");
             break;
         case 1:
             dot0.classList.remove("dot-active");
             dot1.classList.add("dot-active");
             dot2.classList.remove("dot-active");
             dot3.classList.remove("dot-active");
+            dot4.classList.remove("dot-active");
+            dot5.classList.remove("dot-active")
             break;
         case 2:
             dot0.classList.remove("dot-active");
             dot1.classList.remove("dot-active");
             dot2.classList.add("dot-active");
             dot3.classList.remove("dot-active");
+            dot4.classList.remove("dot-active");
+            dot5.classList.remove("dot-active")
             break;
         case 3:
             dot0.classList.remove("dot-active");
             dot1.classList.remove("dot-active");
             dot2.classList.remove("dot-active");
             dot3.classList.add("dot-active");
+            dot4.classList.remove("dot-active");
+            dot5.classList.remove("dot-active")
+            break;
+        case 4:
+            dot0.classList.remove("dot-active");
+            dot1.classList.remove("dot-active");
+            dot2.classList.remove("dot-active");
+            dot3.classList.remove("dot-active");
+            dot4.classList.add("dot-active");
+            dot5.classList.remove("dot-active")
+            break;
+        case 5:
+            dot0.classList.remove("dot-active");
+            dot1.classList.remove("dot-active");
+            dot2.classList.remove("dot-active");
+            dot3.classList.remove("dot-active");
+            dot4.classList.remove("dot-active");
+            dot5.classList.add("dot-active")
             break;
         default:
             break;

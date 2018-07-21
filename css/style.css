@@ -5,19 +5,35 @@ h1 {
     padding: 0;
     margin: 0;
 }
-.main-title {
+.title-wrap{
     width: 100%;
-    height: 30px;
-    color: red;
-    background: grey;
+    position: relative;
+    background-color: var(--main-red);
+}
+.main-title{
+    width: 100%;
     text-align: center;
     padding: 2% 0;
+    color: white;
 }
 html, body {
     height: 100%;
     margin: 0;
     font-family: 'Nunito', sans-serif;
     letter-spacing: 1px;
+}
+
+#dance-style-line, #schedule-line {
+    position: absolute;
+    fill: var(--main-red);
+}
+#dance-style-line {
+    top: 100%;
+}
+#schedule-line {
+    top: 99%;
+    transform: scaleY(-1);
+    z-index: 1;
 }
 .container {
     max-width: 1080px;
@@ -33,8 +49,9 @@ html, body {
 nav{
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 4;
     background-color: white;
+    box-shadow: 0px 6px 0px rgba(229, 45, 42, 1);
 }
 .nav-wrap {
     display: flex;
@@ -95,13 +112,12 @@ nav{
     height: 100%;
 }
 .bg {
-    background-image: url("../img/0.jpg");
+    background-image: url("../img/UDSspletna0_comp_1600.png");
     height: 100%; 
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    /* TRANSITION */
     transition: 500ms cubic-bezier(1, 0.03, 0.66, 1.01);
 }
 
@@ -144,12 +160,12 @@ nav{
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-  }
+}
 
-  .dot-active {
+.dot-active {
     background-color: white;
     transform: scale(1.2);
-  }
+}
 
 .style{
     display: grid;
@@ -165,21 +181,23 @@ nav{
     
 
 }
-
 .pic img{
     width: 100%;
     height: 100%;
 }
-
 .pic{
     height: 100%;
 }
 
-
-
- /*----STYLES END----*/
-
 /*----SCHEDULE----*/
+.schedule1 {
+    background-image: url('../img/UDS_bg_1600.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 2%; 
+}
 .schedule_2 {
     display: none;
 }
@@ -187,17 +205,18 @@ nav{
 .schedule_wrap {
     display: grid;
     grid-template-columns: repeat(6, minmax(10%, 1fr));
-    padding: 20px;
-    border: 1px solid black;
+    padding: 20px 20px 60px 20px;
+    position: relative;
+    z-index: 2;
 }
 
 .sch {
-    border: 1px solid black;
-    margin: 20px;
+    margin: 10px 5px;
     display: grid;
     align-items: center;
     justify-items: center;
-
+    background-color: white;
+    border-radius: 10px;
 }
 
 .sch_day{
@@ -205,15 +224,29 @@ nav{
     background: none;
     height: auto;
     border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
 }
-
+.sch-class{
+    font-weight: bold;
+    font-size: 18px;
+    margin: 20px 0 0 0;
+}
+.teacher {
+    font-size: 14px;
+    margin: 5px 0 0 0;
+}
 .hour{
-    color: red;
+    color: var(--main-red);
+    font-weight: bolder;
+    margin: 30px 0;
 }
 
 .timetable{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid rgba(220, 220, 220, 0.5);
 }
 
 .dance_style{
@@ -230,6 +263,8 @@ nav{
 }
 
 /*----SCHEDULE END----*/
+
+
 
 
 
@@ -300,6 +335,9 @@ nav{
 
 /*----SCHEDULE BREAKPOINT----*/
 @media(max-width:1054px) {
+    .prev, .next {
+        display: none;
+    }
     .schedule1 {
         display: none;
     }
@@ -308,7 +346,8 @@ nav{
     }
 
     .schedule_2 h2{
-        padding: 0 20px;
+        padding: 2% 20px 0 20px;
+        margin-bottom: 5px;
     }
 
     .schedule_wrap {
@@ -320,6 +359,9 @@ nav{
 
     .timetable{
         padding: 0 20px;
+    }
+    .hour {
+        margin: 16px 0;
     }
 }
 
