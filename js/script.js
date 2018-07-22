@@ -31,8 +31,6 @@ const arrImgBig =
         'url("img/UDSspletna4_comp_1600.png")',
         'url("img/UDSspletna5_comp_1600.png")',
     ];
-
-
 const dot0 = document.querySelector(".dot-0");
 const dot1 = document.querySelector(".dot-1");
 const dot2 = document.querySelector(".dot-2");
@@ -41,7 +39,24 @@ const dot4 = document.querySelector(".dot-4");
 const dot5 = document.querySelector(".dot-5");
 let startImgIndex = 0;
 let currentIndex = 0;
+// navigation anchor scroll
 
+const navLinks = Array.from(document.querySelectorAll(".navigation a"));
+const navAnchor = Array.from(document.querySelectorAll(".main-title"));
+navLinks.forEach(link => link.addEventListener("click", function(e) {
+    e.preventDefault();
+    let navIndex = navLinks.indexOf(link);
+    scrollTo(navAnchor[navIndex]);
+}));
+
+function scrollTo(element) {
+    let elementCoord = element.getBoundingClientRect();
+    window.scroll({
+        behavior: 'smooth',
+        left: 0,
+        top: elementCoord.top
+    });
+}
 
 
 // navigation functions
