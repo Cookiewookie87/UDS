@@ -40,24 +40,19 @@ const dot5 = document.querySelector(".dot-5");
 let startImgIndex = 0;
 let currentIndex = 0;
 // navigation anchor scroll
-
+const nav = document.querySelector(".nav");
 const navLinks = Array.from(document.querySelectorAll(".navigation a"));
 const navAnchor = Array.from(document.querySelectorAll(".main-title"));
-navLinks.forEach(link => link.addEventListener("click", function(e) {
-    e.preventDefault();
-    let navIndex = navLinks.indexOf(link);
-    scrollTo(navAnchor[navIndex]);
-}));
 
+// anchor scroll function
 function scrollTo(element) {
     let elementCoord = element.getBoundingClientRect();
     window.scroll({
         behavior: 'smooth',
         left: 0,
-        top: elementCoord.top
+        top: elementCoord.top + window.scrollY - nav.clientHeight
     });
 }
-
 
 // navigation functions
 function toggleNav() {
@@ -203,6 +198,13 @@ nextImgBtn.addEventListener("click", nextImgShow)
 
 previousImgBtn.addEventListener("click", previousImgShow);
 imgDotBtn.forEach(btn => btn.addEventListener("click", dotBtnNavigate));
+
+// anchor scroll event
+navLinks.forEach(link => link.addEventListener("click", function(e) {
+    e.preventDefault();
+    let navIndex = navLinks.indexOf(link);
+    scrollTo(navAnchor[navIndex]);
+}));
 
 // for touch devices (carousel navigate)
 const gestureZone = document.querySelector('.img-wrap');
