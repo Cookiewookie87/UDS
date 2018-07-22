@@ -44,16 +44,6 @@ const nav = document.querySelector(".nav");
 const navLinks = Array.from(document.querySelectorAll(".navigation a"));
 const navAnchor = Array.from(document.querySelectorAll(".main-title"));
 
-// anchor scroll function
-function scrollTo(element) {
-    let elementCoord = element.getBoundingClientRect();
-    window.scroll({
-        behavior: 'smooth',
-        left: 0,
-        top: elementCoord.top + window.scrollY - nav.clientHeight
-    });
-}
-
 // navigation functions
 function toggleNav() {
     navigation.classList.toggle("active");
@@ -189,6 +179,24 @@ function toggleDotActive(currentIndex) {
     }
 }
 
+// anchor scroll function
+function scrollTo(element) {
+    let elementCoord = element.getBoundingClientRect();
+    if (element.classList.contains("main-title")) { 
+        window.scroll({
+            behavior: 'smooth',
+            left: 0,
+            top: elementCoord.top + window.scrollY - nav.clientHeight
+        });
+    } else {
+        window.scroll({
+            behavior: 'smooth',
+            left: 0,
+            top: 0
+        });
+    }
+}
+
 // navigation events
 navigationToggleButton.addEventListener("click", toggleNav);
 navigationList.forEach(item => item.addEventListener("click", navLink));
@@ -205,6 +213,10 @@ navLinks.forEach(link => link.addEventListener("click", function(e) {
     let navIndex = navLinks.indexOf(link);
     scrollTo(navAnchor[navIndex]);
 }));
+logo.addEventListener("click", (e) => {
+    e.preventDefault();
+    scrollTo(logo);
+});
 
 // for touch devices (carousel navigate)
 const gestureZone = document.querySelector('.img-wrap');
