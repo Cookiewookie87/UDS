@@ -1,7 +1,7 @@
 // navigation selection
-const navigation = document.querySelector("ul.navigationTwo");
+const navigationTwo = document.querySelector("ul.navigationTwo");
 const navigationToggleButton = document.querySelector(".navigation-toggle");
-const navigationList = document.querySelectorAll(".navigation a");
+const navigationListTwo = document.querySelectorAll(".navigationTwo .scroll_anchor");
 const navigationToggleIcon = navigationToggleButton.querySelector("i");
 const logo = document.getElementById("logo");
 const navWrap = document.querySelector(".nav-wrap ul");
@@ -42,11 +42,13 @@ let currentIndex = 0;
 // navigation anchor scroll
 const nav = document.querySelector(".nav");
 const navLinks = Array.from(document.querySelectorAll(".navigation a"));
+const navLinksTwo = Array.from(document.querySelectorAll(".navigationTwo .scroll_anchor"));
+console.log(navLinksTwo);
 const navAnchor = Array.from(document.querySelectorAll(".main-title"));
 
 // navigation functions
 function toggleNav() {
-    navigation.classList.toggle("active");
+    navigationTwo.classList.toggle("active");
     if (navigationToggleIcon.classList.contains("fa-bars")) { 
         navigationToggleIcon.classList.remove("fa-bars");
         navigationToggleIcon.classList.add("fa-times");
@@ -57,7 +59,7 @@ function toggleNav() {
 }
  
 function navLink() {
-    navigation.classList.remove("active");
+    navigationTwo.classList.remove("active");
     navigationToggleIcon.classList.add("fa-bars");
     navigationToggleIcon.classList.remove("fa-times");
 }
@@ -199,7 +201,7 @@ function scrollTo(element) {
 
 // navigation events
 navigationToggleButton.addEventListener("click", toggleNav);
-navigationList.forEach(item => item.addEventListener("click", navLink));
+navigationListTwo.forEach(item => item.addEventListener("click", navLink));
 
 // background image event
 nextImgBtn.addEventListener("click", nextImgShow)
@@ -212,6 +214,11 @@ navLinks.forEach(link => link.addEventListener("click", function(e) {
     e.preventDefault();
     let navIndex = navLinks.indexOf(link);
     scrollTo(navAnchor[navIndex]);
+}));
+navLinksTwo.forEach(link => link.addEventListener("click", function(e) {
+    e.preventDefault();
+    let navIndexTwo = navLinksTwo.indexOf(link);
+    scrollTo(navAnchor[navIndexTwo]);
 }));
 logo.addEventListener("click", (e) => {
     e.preventDefault();
@@ -239,7 +246,7 @@ function handleGesture() {
 var interval = setInterval(nextImgShow, 2000);
 // navigation events
 navigationToggleButton.addEventListener("click", toggleNav);
-navigationList.forEach(item => item.addEventListener("click", navLink));
+navigationListTwo.forEach(item => item.addEventListener("click", navLink));
 
 // background image event
 nextImgBtn.addEventListener("click", nextImgShow);
