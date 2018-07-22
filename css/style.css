@@ -51,7 +51,7 @@ nav{
     width: 100%;
     z-index: 4;
     background-color: white;
-    box-shadow: 0px 6px 0px rgba(229, 45, 42, 1);
+    box-shadow: 0px 4px 0px rgba(229, 45, 42, 1);
 }
 .nav-wrap {
     display: flex;
@@ -72,15 +72,20 @@ nav{
     margin-right: 10px;
     margin-top: 26px;
 }
-.navigation li {
+
+.navigationTwo{
+    display: none;
+}
+
+.navigation li, .navigationTwo li{
     display:inline;
     list-style-type: none;
     margin-right: 30px;
 }
-.navigation li:last-child {
+.navigation li:last-child, .navigationTwo li:last-child {
     margin-right: 0;
 }
-.navigation li a {
+.navigation li a, .navigationTwo li a {
     font-weight: bold;
     padding: 5px 15px;
     transition: 0.3s;
@@ -88,7 +93,7 @@ nav{
     background-color: white;
     text-decoration: none;
 }
-.navigation a:hover {
+.navigation a:hover, .navigationTwo a:hover {
     background-color: var(--main-red);
     color: white;
     border: none;
@@ -102,9 +107,20 @@ nav{
     text-align: right;
     display: none;
 }
+
+.navigationTwo-toggle .fa-bars, .navigationTwo-toggle .fa-times {
+    color: var(--main-red);
+    font-size: 20px;
+    padding: 20px;
+    text-align: right;
+    display: none;
+}
+
 .toggle-active {
     background-color: gray;
 }
+
+
 
 /*----PICTURE CAROUSEL----*/
 .img-wrap {
@@ -279,19 +295,19 @@ nav{
     .buffer {
         display: none;
     }
-    .navigation a:hover {
+    .navigation a:hover, .navigationTwo a:hover{
         background-color: var(--main-red);
         color: white;
         border: none;
         border-radius: 100px;
         padding: 5px 10px;
     }
-    .navigation a:hover {
+    .navigation a:hover, .navigationTwo a:hover{
         padding: 30px 0;
         background-color: transparent;
         color: white;
     }
-    .navigation {
+    .navigation, .navigationTwo {
         opacity: 0;
         visibility: hidden;
         transform: translate(0px, -390px);
@@ -300,10 +316,10 @@ nav{
         width: 100%;
         transition: transform 100ms linear;
     }
-    .navigation {
+    .navigation, .navigationTwo {
         background-color: rgba(224, 26, 26, 0.9);
     }
-    .navigation li {
+    .navigation li, .navigationTwo li {
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -311,7 +327,7 @@ nav{
         border-bottom: 1px solid var(--main-red);
     }
 
-    .navigation li a {
+    .navigation li a, .navigationTwo li a {
         padding: 30px 0;
         background-color: transparent;
         color: white;
@@ -322,6 +338,7 @@ nav{
         padding: 0;
     }
 
+
     .active {
         display: block;
         visibility: visible;
@@ -330,6 +347,24 @@ nav{
         transform: scale(1);
         position: absolute;
         z-index: -1;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .navigationTwo {
+        display: block;
+    }
+
+    .social {
+        display: grid !important;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .social_icon {
+        color: white;
+        font-size: 20px;
     }
 }
 
@@ -384,6 +419,9 @@ nav{
         "j";
     }
     
+    .content h2 {
+        width: auto;
+    }
     .hiphop .content{
         grid-area: a;
         grid-column: span 2;

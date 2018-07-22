@@ -1,5 +1,5 @@
 // navigation selection
-const navigation = document.querySelector("ul.navigation");
+const navigation = document.querySelector("ul.navigationTwo");
 const navigationToggleButton = document.querySelector(".navigation-toggle");
 const navigationList = document.querySelectorAll(".navigation a");
 const navigationToggleIcon = navigationToggleButton.querySelector("i");
