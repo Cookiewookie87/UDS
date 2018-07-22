@@ -366,6 +366,9 @@ nav{
 }
 
 @media(max-width:800px) {
+    .bg {
+        background-image: url("../img/UDSspletna0_comp_800.jpg");
+    }
     .style{
         display: grid;
         grid-template-areas: 

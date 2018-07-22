@@ -11,15 +11,28 @@ const backgroundImgDiv = document.querySelector(".bg");
 const previousImgBtn = document.querySelector(".prev");
 const nextImgBtn = document.querySelector(".next");
 const imgDotBtn = Array.from(document.querySelectorAll(".dot"));
-const arrImg = 
-[
-    'url("img/UDSspletna0_comp_1600.png")', 
-    'url("img/UDSspletna1_comp_1600.png")',
-    'url("img/UDSspletna2_comp_1600.png")', 
-    'url("img/UDSspletna3_comp_1600.png")',
-    'url("img/UDSspletna4_comp_1600.png")',
-    'url("img/UDSspletna5_comp_1600.png")',
+let arrImg;
+const arrImgSmall = 
+    [
+        'url("img/UDSspletna0_comp_800.jpg")', 
+        'url("img/UDSspletna1_comp_800.jpg")',
+        'url("img/UDSspletna2_comp_800.jpg")', 
+        'url("img/UDSspletna3_comp_800.jpg")',
+        'url("img/UDSspletna4_comp_800.jpg")',
+        'url("img/UDSspletna5_comp_800.jpg")',
 ];
+
+const arrImgBig = 
+    [
+        'url("img/UDSspletna0_comp_1600.png")', 
+        'url("img/UDSspletna1_comp_1600.png")',
+        'url("img/UDSspletna2_comp_1600.png")', 
+        'url("img/UDSspletna3_comp_1600.png")',
+        'url("img/UDSspletna4_comp_1600.png")',
+        'url("img/UDSspletna5_comp_1600.png")',
+    ];
+
+
 const dot0 = document.querySelector(".dot-0");
 const dot1 = document.querySelector(".dot-1");
 const dot2 = document.querySelector(".dot-2");
@@ -51,6 +64,7 @@ function navLink() {
 
 // background image functions
 function nextImgShow() {
+    imgSizing();
     startImgIndex++;
     if (startImgIndex === arrImg.length) {
         startImgIndex = 0;
@@ -64,6 +78,7 @@ function nextImgShow() {
 }
 
 function previousImgShow() {
+    imgSizing();
     startImgIndex--;
     if (startImgIndex === -1) {
         startImgIndex = (arrImg.length - 1);
@@ -89,6 +104,14 @@ function dotBtnNavigate() {
         dotBtnSet(4);
     } else if (this.classList.contains("dot-5")) {
         dotBtnSet(5);
+    }
+}
+
+function imgSizing() {
+    if(window.innerWidth < 800) {
+        arrImg = arrImgSmall;
+    } else {
+        arrImg = arrImgBig;
     }
 }
 
