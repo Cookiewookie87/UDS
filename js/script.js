@@ -43,7 +43,6 @@ let currentIndex = 0;
 const nav = document.querySelector(".nav");
 const navLinks = Array.from(document.querySelectorAll(".navigation a"));
 const navLinksTwo = Array.from(document.querySelectorAll(".navigationTwo .scroll_anchor"));
-console.log(navLinksTwo);
 const navAnchor = Array.from(document.querySelectorAll(".main-title"));
 
 // navigation functions
