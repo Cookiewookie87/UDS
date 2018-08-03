@@ -34,7 +34,7 @@ html, body {
     fill: var(--main-red);
 }
 #dance-style-line {
-    top: 100%;
+    top: 99%;
 }
 #schedule-line {
     top: 99%;
@@ -300,9 +300,13 @@ nav{
 .teacher {
     margin-bottom: 8%;
 }
-.teacher-name{
+.teacher-name, .vodstvo-name{
     font-size: 1.5em;
     margin: 2% 0 0 0;
+}
+.vodstvo-desc{
+    width: 70%;
+    margin: 14px auto;
 }
 .portrait img {
     border-radius: 50%;
