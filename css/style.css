@@ -1,7 +1,7 @@
 :root {
     --main-red: #E52D2A;
 }
-h1 {
+h1, h2 {
     padding: 0;
     margin: 0;
 }
@@ -15,6 +15,12 @@ h1 {
     text-align: center;
     padding: 2% 0;
     color: white;
+}
+.sub-title{
+    text-align: center;
+    grid-column: span 2;
+    color: var(--main-red);
+    padding: 7% 0;
 }
 html, body {
     min-height: 100%;
@@ -280,37 +286,29 @@ nav{
 
 /*----SCHEDULE END----*/
 
-
 .about-us{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
 }
-
 .teachers{
     display: grid;
     grid-template-columns: repeat(2, minmax(10%, 1fr));
     text-align: center;
     grid-gap: 0.5%;
 }
-
 .teacher {
-    margin: 0;
-    background: rgba(220, 220, 220, 0.4);
+    margin-bottom: 8%;
 }
-
-.sub-tittle{
-    text-align: center;
-    grid-column: span 2;
-    background: red;
-    color: white;
+.teacher-name{
+    font-size: 1.5em;
+    margin: 2% 0 0 0;
 }
-
 .portrait img {
-    width: 30%;
-    height: 40%;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
 }
-
 .lead {
     grid-column: span 2;
 }
@@ -571,5 +569,9 @@ nav{
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 20px;
+    }
+    .teacher-desc{
+        width: 70%;
+        margin: 14px auto;
     }
 }
