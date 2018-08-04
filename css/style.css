@@ -326,9 +326,45 @@ nav{
 .about-us p{
     margin-top: 0;
 }
+.info{
+    margin: 0 20px;
+}
+.map{
+    margin: 0 20px 0 0;
+}
 
-
-
+footer .footer-social{
+    background-color: var(--main-red);
+    filter: brightness(150%);
+    padding: 5%;
+    text-align: center;
+}
+.social_icon-footer{
+    color: white;
+    font-size: 2em;
+}
+.footer-social a{
+    margin-right: 40px;
+}
+.footer-social a:last-child{
+    margin-right: 0;
+}
+footer .made-by{
+    background-color: var(--main-red);
+    text-align: center;
+    padding: 1%;
+    color: white;
+    font-size: 11px;
+}
+footer .jt-logo{
+    width: 24px;
+    height: auto;
+    margin-right: 10px;
+}
+footer .ut-logo{
+    width: 24px;
+    height: auto;
+}
 
 
 @media screen and (max-width: 670px) {
@@ -585,5 +621,8 @@ nav{
     .teacher-desc{
         width: 70%;
         margin: 14px auto;
+    }
+    .map{
+        margin: 0;
     }
 }
