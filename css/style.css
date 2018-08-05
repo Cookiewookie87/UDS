@@ -145,6 +145,9 @@ nav{
     background-size: cover;
     position: relative;
     transition: 500ms cubic-bezier(1, 0.03, 0.66, 1.01);
+    -o-transition: 500ms cubic-bezier(1, 0.03, 0.66, 1.01);
+    -moz-transition: 500ms cubic-bezier(1, 0.03, 0.66, 1.01);
+    -webkit-transition: 500ms cubic-bezier(1, 0.03, 0.66, 1.01);
 }
 
 .prev, .next {
