@@ -113,7 +113,6 @@ nav{
     text-align: right;
     display: none;
 }
-
 .navigationTwo-toggle .fa-bars, .navigationTwo-toggle .fa-times {
     color: var(--main-red);
     font-size: 20px;
@@ -121,11 +120,16 @@ nav{
     text-align: right;
     display: none;
 }
-
 .toggle-active {
     background-color: gray;
 }
-
+.navigation li .navBtn-active{
+    background-color: var(--main-red);
+    color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 7px 15px;
+}
 
 
 /*----PICTURE CAROUSEL----*/
@@ -286,11 +290,7 @@ nav{
 
 /*----SCHEDULE END----*/
 
-.about-us{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-}
+
 .teachers{
     display: grid;
     grid-template-columns: repeat(2, minmax(10%, 1fr));

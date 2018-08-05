@@ -198,6 +198,48 @@ function scrollTo(element) {
     }
 }
 
+function scrollPage() { 
+    const title1 = navAnchor[0].getBoundingClientRect();
+    const title1Pos = title1.top - 1;
+    const title2 = navAnchor[1].getBoundingClientRect();
+    const title2Pos = title2.top - 1;
+    const title3 = navAnchor[2].getBoundingClientRect();
+    const title3Pos = title3.top - 1;
+    const title4 = navAnchor[3].getBoundingClientRect();
+    const title4Pos = title4.top - 1;
+
+    if (title1Pos > nav.clientHeight) { 
+        navLinks[0].classList.remove("navBtn-active");
+        navLinks[1].classList.remove("navBtn-active");
+        navLinks[2].classList.remove("navBtn-active");
+        navLinks[3].classList.remove("navBtn-active");
+    }
+    if (title1Pos <= nav.clientHeight && title2Pos > nav.clientHeight) { 
+        navLinks[0].classList.add("navBtn-active");
+        navLinks[1].classList.remove("navBtn-active");
+        navLinks[2].classList.remove("navBtn-active");
+        navLinks[3].classList.remove("navBtn-active");
+    }
+    if (title2Pos <= nav.clientHeight && title3Pos > nav.clientHeight) { 
+        navLinks[0].classList.remove("navBtn-active");
+        navLinks[1].classList.add("navBtn-active");
+        navLinks[2].classList.remove("navBtn-active");
+        navLinks[3].classList.remove("navBtn-active");
+    }
+    if (title3Pos <= nav.clientHeight && title4Pos > nav.clientHeight) { 
+        navLinks[0].classList.remove("navBtn-active");
+        navLinks[1].classList.remove("navBtn-active");
+        navLinks[2].classList.add("navBtn-active");
+        navLinks[3].classList.remove("navBtn-active");
+    }
+    if (title4Pos <= nav.clientHeight) { 
+        navLinks[0].classList.remove("navBtn-active");
+        navLinks[1].classList.remove("navBtn-active");
+        navLinks[2].classList.remove("navBtn-active");
+        navLinks[3].classList.add("navBtn-active");
+    }
+}
+
 // navigation events
 navigationToggleButton.addEventListener("click", toggleNav);
 navigationListTwo.forEach(item => item.addEventListener("click", navLink));
@@ -212,6 +254,7 @@ imgDotBtn.forEach(btn => btn.addEventListener("click", dotBtnNavigate));
 navLinks.forEach(link => link.addEventListener("click", function(e) {
     e.preventDefault();
     let navIndex = navLinks.indexOf(link);
+    navAnchor[navIndex].classList.add("navBtn-active");
     scrollTo(navAnchor[navIndex]);
 }));
 navLinksTwo.forEach(link => link.addEventListener("click", function(e) {
@@ -246,6 +289,7 @@ var interval = setInterval(nextImgShow, 2000);
 // navigation events
 navigationToggleButton.addEventListener("click", toggleNav);
 navigationListTwo.forEach(item => item.addEventListener("click", navLink));
+document.addEventListener("scroll", scrollPage);
 
 // background image event
 nextImgBtn.addEventListener("click", nextImgShow);
