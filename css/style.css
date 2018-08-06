@@ -28,7 +28,6 @@ html, body {
     font-family: 'Nunito', sans-serif;
     letter-spacing: 1px;
 }
-
 #dance-style-line, #schedule-line {
     position: absolute;
     fill: var(--main-red);
@@ -51,7 +50,10 @@ html, body {
     transition: 100ms linear;
     display: block;
 }
-/*----NAVIGATION----*/
+
+/*********************************
+----NAVIGATION----
+*********************************/
 nav{
     position: fixed;
     width: 100%;
@@ -78,11 +80,9 @@ nav{
     margin-right: 10px;
     margin-top: 26px;
 }
-
 .navigationTwo{
     display: none;
 }
-
 .navigation li, .navigationTwo li{
     display:inline;
     list-style-type: none;
@@ -131,14 +131,15 @@ nav{
     padding: 7px 15px;
 }
 
-
-/*----PICTURE CAROUSEL----*/
+/*********************************
+----PICTURE CAROUSEL----
+*********************************/
 .img-wrap {
     width: 100%;
     height: 100vh;
 }
 .bg {
-    background-image: url("../img/carousel/UDSspletna0_comp_1600.png");
+    background-image: url("../img/carousel/UDSspletna0_comp_1600.jpg");
     height: 100%; 
     background-position: top;
     background-repeat: no-repeat;
@@ -218,7 +219,9 @@ nav{
     height: 100%;
 }
 
-/*----SCHEDULE----*/
+/*********************************
+----SCHEDULE----
+*********************************/
 .schedule1 {
     background-image: url('../img/UDS_bg_1600.jpg');
     background-attachment: fixed;
@@ -230,7 +233,6 @@ nav{
 .schedule_2 {
     display: none;
 }
-
 .schedule_wrap {
     display: grid;
     grid-template-columns: repeat(6, minmax(10%, 1fr));
@@ -238,7 +240,6 @@ nav{
     position: relative;
     z-index: 2;
 }
-
 .sch {
     margin: 10px 5px;
     display: grid;
@@ -247,7 +248,6 @@ nav{
     background-color: white;
     border-radius: 10px;
 }
-
 .sch_day{
     text-align: center;
     background: none;
@@ -271,29 +271,25 @@ nav{
     font-weight: bolder;
     margin: 30px 0;
 }
-
 .timetable{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     border-bottom: 1px solid rgba(220, 220, 220, 0.5);
 }
-
 .dance_style{
     justify-content: start;
 }
-
 .hour{
     display: grid;
     justify-content: end;
 }
-
 .schedule_2 h2 {
     color: var(--main-red);
 }
 
-/*----SCHEDULE END----*/
-
-
+/*********************************
+----EKIPA----
+*********************************/
 .teachers{
     display: grid;
     grid-template-columns: repeat(2, minmax(10%, 1fr));
@@ -334,10 +330,15 @@ nav{
     grid-column: span 2;
 }
 
-
-
+/*********************************
+----ABOUT US----
+*********************************/
 .about-us{
-    margin-top: 3%;
+    padding-top: 3%;
+    background-image: url("../img/topography.svg");
+    background-size: 340px, auto;
+    min-height: calc(100vh - 100px);
+    background-attachment: fixed;
 }
 .info p{
     margin: 0 20px;
@@ -372,6 +373,9 @@ nav{
     font-weight: bold;
 }
 
+/*********************************
+----FOOTER----
+*********************************/
 footer .footer-social{
     background-color: var(--main-red);
     filter: brightness(150%);
@@ -391,7 +395,7 @@ footer .footer-social{
 footer .made-by{
     background-color: var(--main-red);
     text-align: center;
-    padding: 1%;
+    padding: 2%;
     color: white;
     font-size: 11px;
 }
@@ -405,7 +409,9 @@ footer .ut-logo{
     height: auto;
 }
 
-
+/*********************************
+----MEDIA QUERIES----
+*********************************/
 @media screen and (max-width: 670px) {
     /*----NAVIGATION MOBILE---*/
     .navigation-toggle .fa-bars, .navigation-toggle .fa-times {
@@ -446,19 +452,15 @@ footer .ut-logo{
         margin-right: 0;
         border-bottom: 1px solid var(--main-red);
     }
-
     .navigation li a, .navigationTwo li a {
         padding: 30px 0;
         background-color: transparent;
         color: white;
     }
-
     .nav-wrap ul {
         margin: 0;
         padding: 0;
     }
-
-
     .active {
         display: block;
         visibility: visible;
@@ -468,26 +470,21 @@ footer .ut-logo{
         position: absolute;
         z-index: -1;
     }
-
     .navigation {
         display: none;
     }
-
     .navigationTwo {
         display: block;
     }
-
     .social {
         display: grid !important;
         grid-template-columns: repeat(3,1fr);
     }
-
     .social_icon {
         color: white;
         font-size: 20px;
     }
 }
-
 /*----SCHEDULE BREAKPOINT----*/
 @media(max-width:1054px) {
     .prev, .next {
@@ -540,7 +537,6 @@ footer .ut-logo{
         "i"
         "j";
     }
-    
     .content h2 {
         width: auto;
     }
@@ -548,7 +544,6 @@ footer .ut-logo{
         grid-area: p1;
         grid-column: span 2;
     }
-
     .poroke .pic {
         grid-area: p2;
         grid-column: span 2;
@@ -557,52 +552,42 @@ footer .ut-logo{
         grid-area: a;
         grid-column: span 2;
     }
-    
     .hiphop .pic {
         grid-area: b;
         grid-column: span 2;
     }
-    
     .jazz .content{
         grid-area: c;
         grid-column: span 2;
     }
-    
     .jazz .pic {
         grid-area: d;
         grid-column: span 2;
     }
-    
     .balet .content{
         grid-area: e;
         grid-column: span 2;
     }
-    
     .balet .pic {
         grid-area: f;
         grid-column: span 2;
     }
-    
     .break .content{
         grid-area: g;
         grid-column: span 2;
     }
-    
     .break .pic {
         grid-area: h;
         grid-column: span 2;
     }
-    
     .kids .content{
         grid-area: i;
         grid-column: span 2;
     }
-
     .kids .pic{
         grid-area: j;
         grid-column: span 2;
     }
-
     .teachers{
         display: grid;
         grid-template-areas: 
@@ -615,12 +600,10 @@ footer .ut-logo{
         "r"
         "s";
     }
-
     .pedagogi{
         grid-area: k;
         grid-column: span 2;
     }
-
     .domen{
         grid-area: l;
         grid-column: span 2;
@@ -641,17 +624,14 @@ footer .ut-logo{
         grid-area: p;
         grid-column: span 2;
     }
-
     .vanesa{
         grid-area: r;
         grid-column: span 2;
     }
-
     .vodstvo{
         grid-area: s;
         grid-column: span 2;
     }
-
     .-us{
         display: grid;
         grid-template-columns: 1fr;

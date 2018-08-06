@@ -24,12 +24,12 @@ const arrImgSmall =
 
 const arrImgBig = 
 [
-    'url("img/carousel/UDSspletna0_comp_1600.png")', 
-    'url("img/carousel/UDSspletna1_comp_1600.png")',
-    'url("img/carousel/UDSspletna2_comp_1600.png")', 
-    'url("img/carousel/UDSspletna3_comp_1600.png")',
-    'url("img/carousel/UDSspletna4_comp_1600.png")',
-    'url("img/carousel/UDSspletna5_comp_1600.png")',
+    'url("img/carousel/UDSspletna0_comp_1600.jpg")', 
+    'url("img/carousel/UDSspletna1_comp_1600.jpg")',
+    'url("img/carousel/UDSspletna2_comp_1600.jpg")', 
+    'url("img/carousel/UDSspletna3_comp_1600.jpg")',
+    'url("img/carousel/UDSspletna4_comp_1600.jpg")',
+    'url("img/carousel/UDSspletna5_comp_1600.jpg")',
 ];
 const dot0 = document.querySelector(".dot-0");
 const dot1 = document.querySelector(".dot-1");
