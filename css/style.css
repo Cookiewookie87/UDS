@@ -297,7 +297,7 @@ nav{
     grid-gap: 0.5%;
 }
 .teacher {
-    margin-bottom: 8%;
+    margin-bottom: 15%;
 }
 .teacher-desc{
     margin-bottom: 6px;
@@ -640,6 +640,9 @@ footer .ut-logo{
     .teacher-desc{
         width: 70%;
         margin: 14px auto;
+    }
+    .teacher {
+        margin-bottom: 8%;
     }
     .map{
         margin: 0;
