@@ -12,6 +12,7 @@ const previousImgBtn = document.querySelector(".prev");
 const nextImgBtn = document.querySelector(".next");
 const imgDotBtn = Array.from(document.querySelectorAll(".dot"));
 let arrImg;
+const imgIntervalSpeed = 5000 // 5 seconds
 const arrImgSmall = 
 [
     'url("img/carousel/UDSspletna0_comp_800.jpg")', 
@@ -78,7 +79,7 @@ function nextImgShow() {
     backgroundImgDiv.style.backgroundImage = arrImg[startImgIndex];
     toggleDotActive(currentIndex);
     clearInterval(interval);
-    interval = setInterval(nextImgShow, 2000);
+    interval = setInterval(nextImgShow, imgIntervalSpeed);
     
 }
 
@@ -92,7 +93,7 @@ function previousImgShow() {
     backgroundImgDiv.style.backgroundImage = arrImg[startImgIndex];
     toggleDotActive(currentIndex);
     clearInterval(interval);
-    interval = setInterval(nextImgShow, 2000);
+    interval = setInterval(nextImgShow, imgIntervalSpeed);
     
 }
 
@@ -126,7 +127,7 @@ function dotBtnSet (number) {
     currentIndex = number;
     toggleDotActive(currentIndex);
     clearInterval(interval);
-    interval = setInterval(nextImgShow, 2000);
+    interval = setInterval(nextImgShow, imgIntervalSpeed);
 }
 
 function toggleDotActive(currentIndex) {
@@ -289,7 +290,7 @@ function handleGesture() {
     }
 }
 
-var interval = setInterval(nextImgShow, 2000);
+var interval = setInterval(nextImgShow, imgIntervalSpeed);
 // navigation events
 navigationToggleButton.addEventListener("click", toggleNav);
 navigationListTwo.forEach(item => item.addEventListener("click", navLink));
