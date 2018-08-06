@@ -501,14 +501,12 @@ footer .ut-logo{
         padding: 2% 20px 0 20px;
         margin-bottom: 5px;
     }
-
     .schedule_wrap {
         display: grid;
         grid-template-columns: repeat(1, minmax(10%, 1fr));
         grid-gap: 20px;
         padding: 20px;
     }
-
     .timetable{
         padding: 0 20px;
     }
