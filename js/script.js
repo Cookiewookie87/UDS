@@ -14,22 +14,22 @@ const imgDotBtn = Array.from(document.querySelectorAll(".dot"));
 let arrImg;
 const arrImgSmall = 
 [
-    'url("img/UDSspletna0_comp_800.jpg")', 
-    'url("img/UDSspletna1_comp_800.jpg")',
-    'url("img/UDSspletna2_comp_800.jpg")', 
-    'url("img/UDSspletna3_comp_800.jpg")',
-    'url("img/UDSspletna4_comp_800.jpg")',
-    'url("img/UDSspletna5_comp_800.jpg")',
+    'url("img/carousel/UDSspletna0_comp_800.jpg")', 
+    'url("img/carousel/UDSspletna1_comp_800.jpg")',
+    'url("img/carousel/UDSspletna2_comp_800.jpg")', 
+    'url("img/carousel/UDSspletna3_comp_800.jpg")',
+    'url("img/carousel/UDSspletna4_comp_800.jpg")',
+    'url("img/carousel/UDSspletna5_comp_800.jpg")',
 ];
 
 const arrImgBig = 
 [
-    'url("img/UDSspletna0_comp_1600.png")', 
-    'url("img/UDSspletna1_comp_1600.png")',
-    'url("img/UDSspletna2_comp_1600.png")', 
-    'url("img/UDSspletna3_comp_1600.png")',
-    'url("img/UDSspletna4_comp_1600.png")',
-    'url("img/UDSspletna5_comp_1600.png")',
+    'url("img/carousel/UDSspletna0_comp_1600.png")', 
+    'url("img/carousel/UDSspletna1_comp_1600.png")',
+    'url("img/carousel/UDSspletna2_comp_1600.png")', 
+    'url("img/carousel/UDSspletna3_comp_1600.png")',
+    'url("img/carousel/UDSspletna4_comp_1600.png")',
+    'url("img/carousel/UDSspletna5_comp_1600.png")',
 ];
 const dot0 = document.querySelector(".dot-0");
 const dot1 = document.querySelector(".dot-1");
@@ -44,6 +44,10 @@ const nav = document.querySelector(".nav");
 const navLinks = Array.from(document.querySelectorAll(".navigation a"));
 const navLinksTwo = Array.from(document.querySelectorAll(".navigationTwo .scroll_anchor"));
 const navAnchor = Array.from(document.querySelectorAll(".main-title"));
+
+// copy text
+const emailText = document.querySelector(".email");
+emailText.innerHTML = "&#100;&#97;&#110;&#99;&#101;&#115;&#116;&#117;&#100;&#105;&#111;&#46;&#117;&#100;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;"
 
 // navigation functions
 function toggleNav() {

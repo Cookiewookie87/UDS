@@ -138,7 +138,7 @@ nav{
     height: 100vh;
 }
 .bg {
-    background-image: url("../img/UDSspletna0_comp_1600.png");
+    background-image: url("../img/carousel/UDSspletna0_comp_1600.png");
     height: 100%; 
     background-position: top;
     background-repeat: no-repeat;
@@ -288,7 +288,7 @@ nav{
 }
 
 .schedule_2 h2 {
-    color: red;
+    color: var(--main-red);
 }
 
 /*----SCHEDULE END----*/
@@ -302,6 +302,20 @@ nav{
 }
 .teacher {
     margin-bottom: 8%;
+}
+.teacher-desc{
+    margin-bottom: 6px;
+}
+.teacher-social{
+    text-align: center;
+}
+.teacher-social a{
+    color: var(--main-red);
+    font-size: 2em;
+    margin-right: 20px;
+}
+.teacher-social a:last-child{
+    margin-right: 0;
 }
 .teacher-name, .vodstvo-name{
     font-size: 1.5em;
@@ -322,18 +336,40 @@ nav{
 
 
 
-
 .about-us{
-    margin-top: 2%;
+    margin-top: 3%;
 }
-.about-us p{
-    margin-top: 0;
-}
-.info{
+.info p{
     margin: 0 20px;
 }
-.map{
-    margin: 0 20px 0 0;
+.contact-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 0;
+}
+.contact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.contact_icon{
+    font-size: 2em;
+    color: var(--main-red);
+    margin-right: 10px;
+    text-align: center;
+}
+.icon-wrap{
+    display: flex;
+    flex-direction: column;
+}
+.icon-wrap i{
+    margin: 10px 20px 10px 0;
+}
+.contact-container p{
+    margin: 30px 0;
+    color: var(--main-red);
+    font-weight: bold;
 }
 
 footer .footer-social{
@@ -616,7 +652,7 @@ footer .ut-logo{
         grid-column: span 2;
     }
 
-    .about-us{
+    .-us{
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 20px;
