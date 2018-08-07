@@ -294,7 +294,7 @@ nav{
     display: grid;
     grid-template-columns: repeat(2, minmax(10%, 1fr));
     text-align: center;
-    grid-gap: 0.5%;
+    grid-gap: 2.5%;
 }
 .teacher {
     margin-bottom: 15%;
@@ -334,11 +334,24 @@ nav{
 ----ABOUT US----
 *********************************/
 .about-us{
-    padding-top: 3%;
     background-image: url("../img/topography.svg");
     background-size: 340px, auto;
     min-height: calc(100vh - 100px);
     background-attachment: fixed;
+}
+.video-container {
+	position: relative;
+	padding-bottom: 40%; /* 56.25% 16:9 */
+	/*padding-top: 25px;*/
+    height: 0;
+    margin: 0 20px 5% 20px;
+}
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 .info p{
     margin: 0 20px;
@@ -371,6 +384,9 @@ nav{
     margin: 30px 0;
     color: var(--main-red);
     font-weight: bold;
+}
+.map{
+    margin: 0 20px;
 }
 
 /*********************************
