@@ -612,38 +612,43 @@ footer .ut-logo{
         "o"
         "p"
         "r"
-        "s";
+        "s"
+        "t";
     }
     .pedagogi{
         grid-area: k;
         grid-column: span 2;
     }
-    .domen{
+    .teacher1{
         grid-area: l;
         grid-column: span 2;
     }
-    .monja{
+    .teacher2{
         grid-area: m;
         grid-column: span 2;
     }
-    .naki{
+    .teacher3{
         grid-area: n;
         grid-column: span 2;
     }
-    .rebeka{
+    .teacher4{
         grid-area: o;
         grid-column: span 2;
     }
-    .zan{
+    .teacher5{
         grid-area: p;
         grid-column: span 2;
     }
-    .vanesa{
+    .teacher6{
         grid-area: r;
         grid-column: span 2;
     }
-    .vodstvo{
+    .teacher7{
         grid-area: s;
+        grid-column: span 2;
+    }
+    .vodstvo{
+        grid-area: t;
         grid-column: span 2;
     }
     .-us{
