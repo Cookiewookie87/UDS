@@ -141,8 +141,7 @@ nav{
     width: 100%;
     height: 100vh;
 }
-.bg {
-    background-image: url("../img/carousel/UDSspletna0_comp_1600.jpg");
+.carouselImg {
     height: 100%; 
     background-position: top;
     background-repeat: no-repeat;
@@ -209,6 +208,30 @@ nav{
 
 .carouselImg--active {
     opacity: 1;
+}
+
+.img0{
+    background-image: url('../img/carousel/UDSspletna0_comp_1600.jpg');
+}
+
+.img1{
+    background-image: url('../img/carousel/UDSspletna1_comp_1600.jpg');
+}
+
+.img2{
+    background-image: url('../img/carousel/UDSspletna2_comp_1600.jpg');
+}
+
+.img3{
+    background-image: url('../img/carousel/UDSspletna3_comp_1600.jpg');
+}
+
+.img4{
+    background-image: url('../img/carousel/UDSspletna4_comp_1600.jpg');
+}
+
+.img5{
+    background-image: url('../img/carousel/UDSspletna5_comp_1600.jpg');
 }
 
 /*********************************
@@ -545,8 +568,28 @@ footer .ut-logo{
 }
 
 @media(max-width:800px) {
-    .bg {
-        background-image: url("../img/carousel/UDSspletna0_comp_800.jpg");
+    .img0{
+        background-image: url('../img/carousel/UDSspletna0_comp_800.jpg');
+    }
+    
+    .img1{
+        background-image: url('../img/carousel/UDSspletna1_comp_800.jpg');
+    }
+    
+    .img2{
+        background-image: url('../img/carousel/UDSspletna2_comp_800.jpg');
+    }
+    
+    .img3{
+        background-image: url('../img/carousel/UDSspletna3_comp_800.jpg');
+    }
+    
+    .img4{
+        background-image: url('../img/carousel/UDSspletna4_comp_800.jpg');
+    }
+    
+    .img5{
+        background-image: url('../img/carousel/UDSspletna5_comp_800.jpg');
     }
     .style{
         display: grid;
