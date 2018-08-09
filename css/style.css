@@ -5,6 +5,10 @@ h1, h2 {
     padding: 0;
     margin: 0;
 }
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
 .title-wrap{
     width: 100%;
     position: relative;
@@ -40,9 +44,8 @@ html, body {
     transform: scaleY(-1);
     z-index: 1;
 }
-.container {
-    max-width: 1080px;
-    margin: 0 auto;
+.style .content, .teacher .teacher-desc, .teacher .vodstvo-desc, .about-us .info{
+    text-align: justify;
 }
 .buffer {
     height: 50px;
@@ -197,19 +200,18 @@ nav{
     transform: scale(1.2);
 }
 
+/*********************************
+----DANCE STYLES----
+*********************************/
 .style{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
 }
-
 .content{
     padding: 0 0% 0 0%;
     margin: 0 20px;
     display: grid;
     align-content: center;
-    
-
 }
 .pic img{
     width: 100%;
@@ -341,8 +343,8 @@ nav{
 }
 .video-container {
 	position: relative;
-	padding-bottom: 40%; /* 56.25% 16:9 */
-	/*padding-top: 25px;*/
+	padding-bottom: 56.25%; /* 56.25% 16:9 */
+	padding-top: 25px;
     height: 0;
     margin: 0 20px 5% 20px;
 }
