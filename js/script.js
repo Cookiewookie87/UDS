@@ -7,39 +7,21 @@ const logo = document.getElementById("logo");
 const navWrap = document.querySelector(".nav-wrap ul");
 
 // background image selector
-const backgroundImgDiv = document.querySelector(".bg");
+const arrImg = Array.from(document.querySelectorAll(".carouselImg"));
 const previousImgBtn = document.querySelector(".prev");
 const nextImgBtn = document.querySelector(".next");
-const imgDotBtn = Array.from(document.querySelectorAll(".dot"));
-let arrImg;
-const imgIntervalSpeed = 5000 // 5 seconds
-const arrImgSmall = 
-[
-    'url("img/carousel/UDSspletna0_comp_800.jpg")', 
-    'url("img/carousel/UDSspletna1_comp_800.jpg")',
-    'url("img/carousel/UDSspletna2_comp_800.jpg")', 
-    'url("img/carousel/UDSspletna3_comp_800.jpg")',
-    'url("img/carousel/UDSspletna4_comp_800.jpg")',
-    'url("img/carousel/UDSspletna5_comp_800.jpg")',
-];
-
-const arrImgBig = 
-[
-    'url("img/carousel/UDSspletna0_comp_1600.jpg")', 
-    'url("img/carousel/UDSspletna1_comp_1600.jpg")',
-    'url("img/carousel/UDSspletna2_comp_1600.jpg")', 
-    'url("img/carousel/UDSspletna3_comp_1600.jpg")',
-    'url("img/carousel/UDSspletna4_comp_1600.jpg")',
-    'url("img/carousel/UDSspletna5_comp_1600.jpg")',
-];
+let startImgIndex = 0;
+let currentIndex = 0;
 const dot0 = document.querySelector(".dot-0");
 const dot1 = document.querySelector(".dot-1");
 const dot2 = document.querySelector(".dot-2");
 const dot3 = document.querySelector(".dot-3");
 const dot4 = document.querySelector(".dot-4");
 const dot5 = document.querySelector(".dot-5");
-let startImgIndex = 0;
-let currentIndex = 0;
+const dots = Array.from(document.querySelectorAll(".dot"));
+const imgIntervalSpeed = 2000;
+let interval = setInterval(nextImgShow, imgIntervalSpeed);
+
 // navigation anchor scroll
 const nav = document.querySelector(".nav");
 const navLinks = Array.from(document.querySelectorAll(".navigation a"));
@@ -69,50 +51,7 @@ function navLink() {
 }
 
 // background image functions
-function nextImgShow() {
-    imgSizing();
-    startImgIndex++;
-    if (startImgIndex === arrImg.length) {
-        startImgIndex = 0;
-    }
-    currentIndex = startImgIndex;
-    backgroundImgDiv.style.backgroundImage = arrImg[startImgIndex];
-    toggleDotActive(currentIndex);
-    clearInterval(interval);
-    interval = setInterval(nextImgShow, imgIntervalSpeed);
-    
-}
-
-function previousImgShow() {
-    imgSizing();
-    startImgIndex--;
-    if (startImgIndex === -1) {
-        startImgIndex = (arrImg.length - 1);
-    }
-    currentIndex = startImgIndex;
-    backgroundImgDiv.style.backgroundImage = arrImg[startImgIndex];
-    toggleDotActive(currentIndex);
-    clearInterval(interval);
-    interval = setInterval(nextImgShow, imgIntervalSpeed);
-    
-}
-
-function dotBtnNavigate() { 
-    if (this.classList.contains("dot-0")) {
-        dotBtnSet(0);
-    } else if (this.classList.contains("dot-1")) {
-        dotBtnSet(1);
-    } else if (this.classList.contains("dot-2")) {
-        dotBtnSet(2);
-    } else if (this.classList.contains("dot-3")) {
-        dotBtnSet(3);
-    } else if (this.classList.contains("dot-4")) {
-        dotBtnSet(4);
-    } else if (this.classList.contains("dot-5")) {
-        dotBtnSet(5);
-    }
-}
-
+/*
 function imgSizing() {
     if(window.innerWidth < 800) {
         arrImg = arrImgSmall;
@@ -120,70 +59,50 @@ function imgSizing() {
         arrImg = arrImgBig;
     }
 }
+*/
+function nextImgShow() {
+    startImgIndex++;
+    if (startImgIndex === arrImg.length) {
+        startImgIndex = 0;
+    }
+    currentIndex = startImgIndex;
+    arrImg.forEach(img => img.classList.remove("carouselImg--active"));
+    arrImg[startImgIndex].classList.add("carouselImg--active");
+    toggleDotActive(currentIndex);
+    clearInterval(interval);
+    interval = setInterval(nextImgShow, imgIntervalSpeed);
+}
 
-function dotBtnSet (number) {
-    backgroundImgDiv.style.backgroundImage = arrImg[number];
-    startImgIndex = number;
-    currentIndex = number;
+function previousImgShow() {
+    startImgIndex--;
+    if (startImgIndex === -1) {
+        startImgIndex = (arrImg.length - 1);
+    }
+    currentIndex = startImgIndex;
+    arrImg.forEach(img => img.classList.remove("carouselImg--active"));
+    arrImg[startImgIndex].classList.add("carouselImg--active");
     toggleDotActive(currentIndex);
     clearInterval(interval);
     interval = setInterval(nextImgShow, imgIntervalSpeed);
 }
 
 function toggleDotActive(currentIndex) {
-    switch(currentIndex) {
-        case 0:
-            dot0.classList.add("dot-active");
-            dot1.classList.remove("dot-active");
-            dot2.classList.remove("dot-active");
-            dot3.classList.remove("dot-active");
-            dot4.classList.remove("dot-active");
-            dot5.classList.remove("dot-active");
-            break;
-        case 1:
-            dot0.classList.remove("dot-active");
-            dot1.classList.add("dot-active");
-            dot2.classList.remove("dot-active");
-            dot3.classList.remove("dot-active");
-            dot4.classList.remove("dot-active");
-            dot5.classList.remove("dot-active")
-            break;
-        case 2:
-            dot0.classList.remove("dot-active");
-            dot1.classList.remove("dot-active");
-            dot2.classList.add("dot-active");
-            dot3.classList.remove("dot-active");
-            dot4.classList.remove("dot-active");
-            dot5.classList.remove("dot-active")
-            break;
-        case 3:
-            dot0.classList.remove("dot-active");
-            dot1.classList.remove("dot-active");
-            dot2.classList.remove("dot-active");
-            dot3.classList.add("dot-active");
-            dot4.classList.remove("dot-active");
-            dot5.classList.remove("dot-active")
-            break;
-        case 4:
-            dot0.classList.remove("dot-active");
-            dot1.classList.remove("dot-active");
-            dot2.classList.remove("dot-active");
-            dot3.classList.remove("dot-active");
-            dot4.classList.add("dot-active");
-            dot5.classList.remove("dot-active")
-            break;
-        case 5:
-            dot0.classList.remove("dot-active");
-            dot1.classList.remove("dot-active");
-            dot2.classList.remove("dot-active");
-            dot3.classList.remove("dot-active");
-            dot4.classList.remove("dot-active");
-            dot5.classList.add("dot-active")
-            break;
-        default:
-            break;
-    }
+    dots.forEach(dot => dot.classList.remove("dot-active"));
+    dots[currentIndex].classList.add("dot-active");
 }
+
+function dotBtnNavigate() { 
+    let dotIndex = dots.indexOf(this);
+    console.log(arrImg[dotIndex]);
+    arrImg.forEach(img => img.classList.remove("carouselImg--active"));
+    arrImg[dotIndex].classList.add("carouselImg--active");
+    toggleDotActive(dotIndex);
+    startImgIndex = dotIndex;
+    currentIndex = dotIndex;
+    clearInterval(interval);
+    interval = setInterval(nextImgShow, imgIntervalSpeed);
+}
+
 
 // anchor scroll function
 function scrollTo(element) {
@@ -250,10 +169,9 @@ navigationToggleButton.addEventListener("click", toggleNav);
 navigationListTwo.forEach(item => item.addEventListener("click", navLink));
 
 // background image event
-nextImgBtn.addEventListener("click", nextImgShow)
-
+nextImgBtn.addEventListener("click", nextImgShow);
 previousImgBtn.addEventListener("click", previousImgShow);
-imgDotBtn.forEach(btn => btn.addEventListener("click", dotBtnNavigate));
+dots.forEach(btn => btn.addEventListener("click", dotBtnNavigate));
 
 // anchor scroll event
 navLinks.forEach(link => link.addEventListener("click", function(e) {
@@ -290,16 +208,10 @@ function handleGesture() {
     }
 }
 
-var interval = setInterval(nextImgShow, imgIntervalSpeed);
 // navigation events
 navigationToggleButton.addEventListener("click", toggleNav);
 navigationListTwo.forEach(item => item.addEventListener("click", navLink));
 document.addEventListener("scroll", scrollPage);
-
-// background image event
-nextImgBtn.addEventListener("click", nextImgShow);
-previousImgBtn.addEventListener("click", previousImgShow);
-imgDotBtn.forEach(btn => btn.addEventListener("click", dotBtnNavigate));
 
 // for touch devices events (carousel navigate)
 gestureZone.addEventListener('touchstart', function(event) {
