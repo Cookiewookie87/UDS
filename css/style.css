@@ -40,7 +40,7 @@ html, body {
     top: 99%;
 }
 #schedule-line {
-    top: 99%;
+    top: 98%;
     transform: scaleY(-1);
     z-index: 1;
 }
@@ -606,6 +606,12 @@ footer .ut-logo{
         "h"
         "i"
         "j";
+    }
+    .style .content h2 {
+        margin-top: 100px;
+    }
+    .poroke .content h2 {
+        margin-top: 30px;
     }
     .content h2 {
         width: auto;
