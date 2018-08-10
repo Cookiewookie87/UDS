@@ -19,7 +19,7 @@ const dot3 = document.querySelector(".dot-3");
 const dot4 = document.querySelector(".dot-4");
 const dot5 = document.querySelector(".dot-5");
 const dots = Array.from(document.querySelectorAll(".dot"));
-const imgIntervalSpeed = 2000;
+const imgIntervalSpeed = 5000;
 let interval = setInterval(nextImgShow, imgIntervalSpeed);
 
 // navigation anchor scroll
