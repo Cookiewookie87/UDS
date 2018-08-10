@@ -728,7 +728,7 @@ footer .ut-logo{
         color: white;
         font-size: 20px;
     }
-    .teacher-desc{
+    .teacher-desc, .vodstvo-desc{
         width: 100%;
     }
 }
