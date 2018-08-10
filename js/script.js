@@ -43,23 +43,11 @@ function toggleNav() {
         navigationToggleIcon.classList.remove("fa-times");
     }
 }
- 
 function navLink() {
     navigationTwo.classList.remove("active");
     navigationToggleIcon.classList.add("fa-bars");
     navigationToggleIcon.classList.remove("fa-times");
 }
-
-// background image functions
-/*
-function imgSizing() {
-    if(window.innerWidth < 800) {
-        arrImg = arrImgSmall;
-    } else {
-        arrImg = arrImgBig;
-    }
-}
-*/
 function nextImgShow() {
     startImgIndex++;
     if (startImgIndex === arrImg.length) {
@@ -72,7 +60,6 @@ function nextImgShow() {
     clearInterval(interval);
     interval = setInterval(nextImgShow, imgIntervalSpeed);
 }
-
 function previousImgShow() {
     startImgIndex--;
     if (startImgIndex === -1) {
@@ -85,12 +72,10 @@ function previousImgShow() {
     clearInterval(interval);
     interval = setInterval(nextImgShow, imgIntervalSpeed);
 }
-
 function toggleDotActive(currentIndex) {
     dots.forEach(dot => dot.classList.remove("dot-active"));
     dots[currentIndex].classList.add("dot-active");
 }
-
 function dotBtnNavigate() { 
     let dotIndex = dots.indexOf(this);
     console.log(arrImg[dotIndex]);
@@ -102,7 +87,6 @@ function dotBtnNavigate() {
     clearInterval(interval);
     interval = setInterval(nextImgShow, imgIntervalSpeed);
 }
-
 
 // anchor scroll function
 function scrollTo(element) {
@@ -121,7 +105,6 @@ function scrollTo(element) {
         });
     }
 }
-
 function scrollPage() { 
     const title1 = navAnchor[0].getBoundingClientRect();
     const title1Pos = title1.top - 1;
@@ -133,33 +116,22 @@ function scrollPage() {
     const title4Pos = title4.top - 1;
 
     if (title1Pos > nav.clientHeight) { 
-        navLinks[0].classList.remove("navBtn-active");
-        navLinks[1].classList.remove("navBtn-active");
-        navLinks[2].classList.remove("navBtn-active");
-        navLinks[3].classList.remove("navBtn-active");
+        navLinks.forEach(link => link.classList.remove("navBtn-active"));
     }
     if (title1Pos <= nav.clientHeight && title2Pos > nav.clientHeight) { 
+        navLinks.forEach(link => link.classList.remove("navBtn-active"));
         navLinks[0].classList.add("navBtn-active");
-        navLinks[1].classList.remove("navBtn-active");
-        navLinks[2].classList.remove("navBtn-active");
-        navLinks[3].classList.remove("navBtn-active");
     }
     if (title2Pos <= nav.clientHeight && title3Pos > nav.clientHeight) { 
-        navLinks[0].classList.remove("navBtn-active");
+        navLinks.forEach(link => link.classList.remove("navBtn-active"));
         navLinks[1].classList.add("navBtn-active");
-        navLinks[2].classList.remove("navBtn-active");
-        navLinks[3].classList.remove("navBtn-active");
     }
     if (title3Pos <= nav.clientHeight && title4Pos > nav.clientHeight) { 
-        navLinks[0].classList.remove("navBtn-active");
-        navLinks[1].classList.remove("navBtn-active");
+        navLinks.forEach(link => link.classList.remove("navBtn-active"));
         navLinks[2].classList.add("navBtn-active");
-        navLinks[3].classList.remove("navBtn-active");
     }
     if (title4Pos <= nav.clientHeight) { 
-        navLinks[0].classList.remove("navBtn-active");
-        navLinks[1].classList.remove("navBtn-active");
-        navLinks[2].classList.remove("navBtn-active");
+        navLinks.forEach(link => link.classList.remove("navBtn-active"));
         navLinks[3].classList.add("navBtn-active");
     }
 }
