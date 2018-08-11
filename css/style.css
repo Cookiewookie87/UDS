@@ -53,7 +53,6 @@ h1, h2 {
     transition: 100ms linear;
     display: block;
 }
-
 /*********************************
 ----NAVIGATION----
 *********************************/
@@ -474,10 +473,11 @@ footer .ut-logo{
     }
     .schedule_2 {
         display: block;
+        padding-bottom: 5%;
     }
 
     .schedule_2 h2{
-        padding: 2% 20px 0 20px;
+        padding: 4% 20px 0 20px;
         margin-bottom: 5px;
     }
     .schedule_wrap {
@@ -489,12 +489,18 @@ footer .ut-logo{
     .timetable{
         padding: 0 20px;
     }
+    .sobota .timetable:last-child{
+        border-bottom: none;
+    }
     .hour {
         margin: 16px 0;
     }
 }
 
 @media(max-width:800px) {
+    .styles, .schedule1, .schedule_2, .teachers, .about-us{
+        padding-bottom: 10%;
+    }
     .img0{
         background-image: url('../img/carousel/UDSspletna0_comp_800.jpg');
     }
