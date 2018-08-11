@@ -1,13 +1,20 @@
 :root {
     --main-red: #E52D2A;
 }
-h1, h2 {
-    padding: 0;
+html, body {
+    min-height: 100%;
     margin: 0;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 1px;
+    word-break: break-all; /*To edit spaces in justify text*/
 }
 .container {
     max-width: 1080px;
     margin: 0 auto;
+}
+h1, h2 {
+    padding: 0;
+    margin: 0;
 }
 .title-wrap{
     width: 100%;
@@ -25,12 +32,6 @@ h1, h2 {
     grid-column: span 2;
     color: var(--main-red);
     padding: 7% 0;
-}
-html, body {
-    min-height: 100%;
-    margin: 0;
-    font-family: 'Nunito', sans-serif;
-    letter-spacing: 1px;
 }
 #dance-style-line, #schedule-line {
     position: absolute;
