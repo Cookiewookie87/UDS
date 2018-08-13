@@ -1,17 +1,17 @@
-:root {
+:root{
     --main-red: #E52D2A;
 }
-html, body {
+html, body{
     min-height: 100%;
     margin: 0;
     font-family: 'Nunito', sans-serif;
     letter-spacing: 1px;
 }
-.container {
+.container{
     max-width: 1080px;
     margin: 0 auto;
 }
-h1, h2 {
+h1, h2{
     padding: 0;
     margin: 0;
 }
@@ -47,7 +47,7 @@ h1, h2 {
 .style .content, .teacher .teacher-desc, .teacher .vodstvo-desc, .about-us .info{
     text-align: justify;
 }
-.buffer {
+.buffer{
     height: 50px;
     background-color: white;
     transition: 100ms linear;
@@ -63,7 +63,7 @@ nav{
     background-color: white;
     box-shadow: 0px 4px 0px rgba(229, 45, 42, 1);
 }
-.nav-wrap {
+.nav-wrap{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -73,12 +73,12 @@ nav{
     background-color: white;
     height: 74px;
 }
-#logo {
+#logo{
     height: 60px;
     margin-left: 20px;
     margin-top: 6px;
 }
-.nav-wrap ul {
+.nav-wrap ul{
     margin-right: 10px;
     margin-top: 26px;
 }
@@ -90,10 +90,10 @@ nav{
     list-style-type: none;
     margin-right: 30px;
 }
-.navigation li:last-child, .navigationTwo li:last-child {
+.navigation li:last-child, .navigationTwo li:last-child{
     margin-right: 0;
 }
-.navigation li a, .navigationTwo li a {
+.navigation li a, .navigationTwo li a{
     font-weight: bold;
     padding: 5px 15px;
     transition: 0.3s;
@@ -101,21 +101,21 @@ nav{
     background-color: white;
     text-decoration: none;
 }
-.navigation a:hover, .navigationTwo a:hover {
+.navigation a:hover, .navigationTwo a:hover{
     background-color: var(--main-red);
     color: white;
     border: none;
     border-radius: 100px;
     padding: 7px 15px;
 }
-.navigation-toggle .fa-bars, .navigation-toggle .fa-times {
+.navigation-toggle .fa-bars, .navigation-toggle .fa-times{
     color: var(--main-red);
     font-size: 20px;
     padding: 20px;
     text-align: right;
     display: none;
 }
-.navigationTwo-toggle .fa-bars, .navigationTwo-toggle .fa-times {
+.navigationTwo-toggle .fa-bars, .navigationTwo-toggle .fa-times{
     color: var(--main-red);
     font-size: 20px;
     padding: 20px;
@@ -132,15 +132,14 @@ nav{
     border-radius: 100px;
     padding: 7px 15px;
 }
-
 /*********************************
 ----PICTURE CAROUSEL----
 *********************************/
-.img-wrap {
+.img-wrap{
     width: 100%;
     height: 100vh;
 }
-.carouselImg {
+.carouselImg{
     height: 100%; 
     background-position: top;
     background-repeat: no-repeat;
@@ -152,7 +151,7 @@ nav{
     -webkit-transition: 500ms cubic-bezier(1, 0.03, 0.66, 1.01);
 }
 
-.prev, .next {
+.prev, .next{
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -166,15 +165,14 @@ nav{
     border-radius: 0 3px 3px 0;
   }
 
-.next {
+.next{
     right: 0;
     border-radius: 3px 0 0 3px;
 }
-
-.prev:hover, .next:hover {
+.prev:hover, .next:hover{
     background-color: rgba(224, 26, 26, 0.9);
 }
-.dot-wrap {
+.dot-wrap{
     position: absolute;
     bottom: 10px;
     left: 0;
@@ -182,7 +180,7 @@ nav{
     margin: 0 auto;
     text-align: center;
 }
-.dot {
+.dot{
     cursor: pointer;
     height: 12px;
     width: 12px;
@@ -192,23 +190,19 @@ nav{
     display: inline-block;
     transition: background-color 0.6s ease;
 }
-
-.dot-active {
+.dot-active{
     background-color: white;
     transform: scale(1.2);
 }
-
-.carouselImg {
+.carouselImg{
     position: absolute;
     width: 100%;
     height: 100vh;
     opacity: 0;
 }
-
-.carouselImg--active {
+.carouselImg--active{
     opacity: 1;
 }
-
 .img0{
     background-image: url('../img/carousel/UDSspletna0_comp_1600.jpg');
 }
@@ -232,7 +226,6 @@ nav{
 .img5{
     background-image: url('../img/carousel/UDSspletna5_comp_1600.jpg');
 }
-
 /*********************************
 ----DANCE STYLES----
 *********************************/
@@ -253,11 +246,10 @@ nav{
 .pic{
     height: 100%;
 }
-
 /*********************************
 ----SCHEDULE----
 *********************************/
-.schedule1 {
+.schedule1{
     background-image: url('../img/UDS_bg_1600.jpg');
     background-attachment: fixed;
     background-position: center;
@@ -265,17 +257,17 @@ nav{
     background-size: cover;
     padding-top: 2%; 
 }
-.schedule_2 {
+.schedule_2{
     display: none;
 }
-.schedule_wrap {
+.schedule_wrap{
     display: grid;
     grid-template-columns: repeat(6, minmax(10%, 1fr));
     padding: 20px 20px 60px 20px;
     position: relative;
     z-index: 2;
 }
-.sch {
+.sch{
     margin: 10px 5px;
     display: grid;
     align-items: center;
@@ -297,7 +289,7 @@ nav{
     font-size: 18px;
     margin: 20px 0 0 0;
 }
-.teacher {
+.teacher{
     font-size: 14px;
     margin: 5px 0 0 0;
 }
@@ -321,7 +313,6 @@ nav{
 .schedule_2 h2 {
     color: var(--main-red);
 }
-
 /*********************************
 ----EKIPA----
 *********************************/
@@ -331,7 +322,7 @@ nav{
     text-align: center;
     grid-gap: 2.5%;
 }
-.teacher {
+.teacher{
     margin-bottom: 15%;
 }
 .teacher-desc{
@@ -364,7 +355,6 @@ nav{
 .lead {
     grid-column: span 2;
 }
-
 /*********************************
 ----ABOUT US----
 *********************************/
@@ -374,14 +364,14 @@ nav{
     min-height: calc(100vh - 100px);
     background-attachment: fixed;
 }
-.video-container {
+.video-container{
 	position: relative;
 	padding-bottom: 56.25%; /* 56.25% 16:9 */
 	padding-top: 25px;
     height: 0;
     margin: 0 20px 5% 20px;
 }
-.video-container iframe {
+.video-container iframe{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -423,7 +413,6 @@ nav{
 .map{
     margin: 0 20px;
 }
-
 /*********************************
 ----FOOTER----
 *********************************/
@@ -459,19 +448,18 @@ footer .ut-logo{
     width: 24px;
     height: auto;
 }
-
 /*********************************
 ----MEDIA QUERIES----
 *********************************/
 /*----SCHEDULE BREAKPOINT----*/
-@media(max-width:1054px) {
-    .prev, .next {
+@media(max-width:1054px){
+    .prev, .next{
         display: none;
     }
-    .schedule1 {
+    .schedule1{
         display: none;
     }
-    .schedule_2 {
+    .schedule_2{
         display: block;
         padding-bottom: 5%;
     }
@@ -480,7 +468,7 @@ footer .ut-logo{
         padding: 4% 20px 0 20px;
         margin-bottom: 5px;
     }
-    .schedule_wrap {
+    .schedule_wrap{
         display: grid;
         grid-template-columns: repeat(1, minmax(10%, 1fr));
         grid-gap: 20px;
@@ -492,35 +480,29 @@ footer .ut-logo{
     .sobota .timetable:last-child{
         border-bottom: none;
     }
-    .hour {
+    .hour{
         margin: 16px 0;
     }
 }
-
-@media(max-width:800px) {
+@media(max-width:800px){
     .styles, .schedule1, .schedule_2, .teachers, .about-us{
         padding-bottom: 10%;
     }
     .img0{
         background-image: url('../img/carousel/UDSspletna0_comp_800.jpg');
     }
-    
     .img1{
         background-image: url('../img/carousel/UDSspletna1_comp_800.jpg');
     }
-    
     .img2{
         background-image: url('../img/carousel/UDSspletna2_comp_800.jpg');
     }
-    
     .img3{
         background-image: url('../img/carousel/UDSspletna3_comp_800.jpg');
     }
-    
     .img4{
         background-image: url('../img/carousel/UDSspletna4_comp_800.jpg');
     }
-    
     .img5{
         background-image: url('../img/carousel/UDSspletna5_comp_800.jpg');
     }
@@ -540,20 +522,20 @@ footer .ut-logo{
         "i"
         "j";
     }
-    .style .content h2 {
+    .style .content h2{
         margin-top: 100px;
     }
-    .poroke .content h2 {
+    .poroke .content h2{
         margin-top: 30px;
     }
-    .content h2 {
+    .content h2{
         width: auto;
     }
-    .poroke .content {
+    .poroke .content{
         grid-area: p1;
         grid-column: span 2;
     }
-    .poroke .pic {
+    .poroke .pic{
         grid-area: p2;
         grid-column: span 2;
     }
@@ -561,7 +543,7 @@ footer .ut-logo{
         grid-area: a;
         grid-column: span 2;
     }
-    .hiphop .pic {
+    .hiphop .pic{
         grid-area: b;
         grid-column: span 2;
     }
@@ -569,7 +551,7 @@ footer .ut-logo{
         grid-area: c;
         grid-column: span 2;
     }
-    .jazz .pic {
+    .jazz .pic{
         grid-area: d;
         grid-column: span 2;
     }
@@ -577,7 +559,7 @@ footer .ut-logo{
         grid-area: e;
         grid-column: span 2;
     }
-    .balet .pic {
+    .balet .pic{
         grid-area: f;
         grid-column: span 2;
     }
@@ -585,7 +567,7 @@ footer .ut-logo{
         grid-area: g;
         grid-column: span 2;
     }
-    .break .pic {
+    .break .pic{
         grid-area: h;
         grid-column: span 2;
     }
@@ -658,16 +640,16 @@ footer .ut-logo{
         width: 70%;
         margin: 14px auto;
     }
-    .teacher {
+    .teacher{
         margin-bottom: 8%;
     }
     .map{
         margin: 0;
     }
 }
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 670px){
     /*----NAVIGATION MOBILE---*/
-    .navigation-toggle .fa-bars, .navigation-toggle .fa-times {
+    .navigation-toggle .fa-bars, .navigation-toggle .fa-times{
         display: block;
         margin-top: 13px;
     }
@@ -686,7 +668,7 @@ footer .ut-logo{
         background-color: transparent;
         color: white;
     }
-    .navigation, .navigationTwo {
+    .navigation, .navigationTwo{
         opacity: 0;
         visibility: hidden;
         transform: translate(0px, -390px);
@@ -695,26 +677,26 @@ footer .ut-logo{
         width: 100%;
         transition: transform 100ms linear;
     }
-    .navigation, .navigationTwo {
+    .navigation, .navigationTwo{
         background-color: rgba(224, 26, 26, 0.9);
     }
-    .navigation li, .navigationTwo li {
+    .navigation li, .navigationTwo li{
         display: flex;
         flex-direction: column;
         text-align: center;
         margin-right: 0;
         border-bottom: 1px solid var(--main-red);
     }
-    .navigation li a, .navigationTwo li a {
+    .navigation li a, .navigationTwo li a{
         padding: 30px 0;
         background-color: transparent;
         color: white;
     }
-    .nav-wrap ul {
+    .nav-wrap ul{
         margin: 0;
         padding: 0;
     }
-    .active {
+    .active{
         display: block;
         visibility: visible;
         opacity: 1;
@@ -723,17 +705,17 @@ footer .ut-logo{
         position: absolute;
         z-index: -1;
     }
-    .navigation {
+    .navigation{
         display: none;
     }
-    .navigationTwo {
+    .navigationTwo{
         display: block;
     }
-    .social {
+    .social{
         display: grid !important;
         grid-template-columns: repeat(3,1fr);
     }
-    .social_icon {
+    .social_icon{
         color: white;
         font-size: 20px;
     }
