@@ -161,18 +161,18 @@ nav{
 }
 .pic-caption{
     position: absolute;
-    top: 50%;
+    top: 47%;
     left: 0; 
     right: 0; 
     margin-left: auto; 
     margin-right: auto; 
-    width: 40%;
-    font-size: 30px;
+    width: 35%;
+    font-size: 24px;
     color: white;
     text-align: center;
     background-color: rgba(229, 45, 42, .8);
     border-radius: 100px;
-    padding: 20px;
+    padding: 10px;
 }
 #vpis-carousel{
     text-decoration: underline;
@@ -429,7 +429,7 @@ nav{
     margin: 0 20px;
 }
 .contact-social{
-    padding: 10% 0 4% 0;
+    padding: 8% 0 2% 0;
     text-align: center;
 }
 .social_icon-contact{
@@ -544,6 +544,9 @@ footer .ut-logo{
 }
 
 @media(max-width:800px) {
+    .pic-caption{
+        top: 40%;
+    }
     /*----NAVIGATION MOBILE---*/
     .navigation-toggle .fa-bars, .navigation-toggle .fa-times {
         display: block;
@@ -780,6 +783,14 @@ footer .ut-logo{
     }
 }
 @media screen and (max-width: 670px) {
+    .pic-caption{
+        padding: 20px;
+        border-radius: 20px;
+        top: 35%;
+    }
+    .dot-wrap{
+        padding-bottom: 15%;
+    }
     .social {
         display: grid !important;
         grid-template-columns: repeat(3,1fr);
