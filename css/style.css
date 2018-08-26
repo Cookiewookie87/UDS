@@ -32,14 +32,15 @@ h1, h2 {
     color: var(--main-red);
     padding: 7% 0;
 }
-#dance-style-line, #schedule-line {
+.line-left, .line-right {
     position: absolute;
     fill: var(--main-red);
 }
-#dance-style-line {
+.line-left {
     top: 99%;
+    z-index: 1;
 }
-#schedule-line {
+.line-right {
     top: 98%;
     transform: scaleY(-1);
     z-index: 1;
@@ -101,6 +102,10 @@ nav{
     background-color: white;
     text-decoration: none;
 }
+#vpis{
+    border: 3px solid var(--main-red);
+    border-radius: 100px;
+}
 .navigation a:hover, .navigationTwo a:hover {
     background-color: var(--main-red);
     color: white;
@@ -132,7 +137,6 @@ nav{
     border-radius: 100px;
     padding: 7px 15px;
 }
-
 /*********************************
 ----PICTURE CAROUSEL----
 *********************************/
@@ -155,7 +159,6 @@ nav{
     -moz-transition: 300ms cubic-bezier(1, 0.03, 0.66, 1.01);
     -webkit-transition: 300ms cubic-bezier(1, 0.03, 0.66, 1.01);
 }
-
 .pic-caption{
     position: absolute;
     top: 50%;
@@ -163,7 +166,7 @@ nav{
     right: 0; 
     margin-left: auto; 
     margin-right: auto; 
-    width: 30%;
+    width: 40%;
     font-size: 30px;
     color: white;
     text-align: center;
@@ -171,7 +174,9 @@ nav{
     border-radius: 100px;
     padding: 20px;
 }
-
+#vpis-carousel{
+    text-decoration: underline;
+}
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -184,13 +189,11 @@ nav{
     font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
-  }
-
+}
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
-
 .prev:hover, .next:hover {
     background-color: rgba(224, 26, 26, 0.9);
 }
@@ -212,40 +215,31 @@ nav{
     display: inline-block;
     transition: background-color 0.6s ease;
 }
-
 .dot-active {
     background-color: white;
     transform: scale(1.2);
 }
-
 .carouselImg--active {
     opacity: 1;
 }
-
 .img0{
     background-image: url('../img/carousel/UDSspletna0_comp_1600.jpg');
 }
-
 .img1{
     background-image: url('../img/carousel/UDSspletna1_comp_1600.jpg');
 }
-
 .img2{
     background-image: url('../img/carousel/UDSspletna2_comp_1600.jpg');
 }
-
 .img3{
     background-image: url('../img/carousel/UDSspletna3_comp_1600.jpg');
 }
-
 .img4{
     background-image: url('../img/carousel/UDSspletna4_comp_1600.jpg');
 }
-
 .img5{
     background-image: url('../img/carousel/UDSspletna5_comp_1600.jpg');
 }
-
 /*********************************
 ----DANCE STYLES----
 *********************************/
@@ -266,7 +260,6 @@ nav{
 .pic{
     height: 100%;
 }
-
 /*********************************
 ----SCHEDULE----
 *********************************/
@@ -334,7 +327,6 @@ nav{
 .schedule_2 h2 {
     color: var(--main-red);
 }
-
 /*********************************
 ----EKIPA----
 *********************************/
@@ -377,7 +369,6 @@ nav{
 .lead {
     grid-column: span 2;
 }
-
 /*********************************
 ----ABOUT US----
 *********************************/
@@ -414,6 +405,7 @@ nav{
     display: flex;
     flex-direction: row;
     align-items: center;
+    border-bottom: 2px solid var(--main-red);
 }
 .contact_icon{
     font-size: 2em;
@@ -436,26 +428,68 @@ nav{
 .map{
     margin: 0 20px;
 }
+.contact-social{
+    padding: 10% 0 4% 0;
+    text-align: center;
+}
+.social_icon-contact{
+    color: var(--main-red);
+    font-size: 2em;
+}
+.contact-social a{
+    margin-right: 40px;
+}
+.contact-social a:last-child{
+    margin-right: 0;
+}
 
+/*********************************
+----VPIS----
+*********************************/
+.vpis{
+    background-color: var(--main-red);
+    filter: brightness(150%);
+    padding-bottom: 15%;
+}
+.vpis-text{
+    margin: 0 20px;
+    padding-top: 5%;
+    color: white;
+    padding-bottom: 5%;
+    text-align: center;
+}
+.vpis-content{
+    text-align: justify;
+}
+.vpis .card img{
+    width: 100%;
+}
+.card {
+    box-shadow: 0px 4px 10px 2px rgba(0,0,0,0.4);
+    transition: 0.3s;
+    width: 40%;
+    background-color: white;
+    margin: 0 auto;
+}
+.card a{
+    text-decoration: none;
+}
+.card:hover {
+    box-shadow: 0 8px 15px 4px rgba(0,0,0,0.3);
+}
+.card-container {
+    padding: 2px 16px;
+    text-align: center;
+    color: var(--main-red);
+    font-weight: bold;
+}
+.vpis-download{
+    color: var(--main-red);
+    font-size: 24px;
+}
 /*********************************
 ----FOOTER----
 *********************************/
-footer .footer-social{
-    background-color: var(--main-red);
-    filter: brightness(150%);
-    padding: 5%;
-    text-align: center;
-}
-.social_icon-footer{
-    color: white;
-    font-size: 2em;
-}
-.footer-social a{
-    margin-right: 40px;
-}
-.footer-social a:last-child{
-    margin-right: 0;
-}
 footer .made-by{
     background-color: var(--main-red);
     text-align: center;
@@ -472,7 +506,6 @@ footer .ut-logo{
     width: 24px;
     height: auto;
 }
-
 /*********************************
 ----MEDIA QUERIES----
 *********************************/
@@ -511,6 +544,74 @@ footer .ut-logo{
 }
 
 @media(max-width:800px) {
+    /*----NAVIGATION MOBILE---*/
+    .navigation-toggle .fa-bars, .navigation-toggle .fa-times {
+        display: block;
+        margin-top: 13px;
+    }
+    .buffer {
+        display: none;
+    }
+    .navigation a:hover, .navigationTwo a:hover{
+        background-color: var(--main-red);
+        color: white;
+        border: none;
+        border-radius: 100px;
+        padding: 5px 10px;
+    }
+    .navigation a:hover, .navigationTwo a:hover{
+        padding: 30px 0;
+        background-color: transparent;
+        color: white;
+    }
+    .navigation, .navigationTwo {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(0px, -390px);
+        position: absolute;
+        top: 74px;
+        width: 100%;
+        transition: transform 100ms linear;
+    }
+    .navigation, .navigationTwo {
+        background-color: rgba(224, 26, 26, 0.9);
+    }
+    .navigation li, .navigationTwo li {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-right: 0;
+        border-bottom: 1px solid var(--main-red);
+    }
+    .navigation li a, .navigationTwo li a {
+        padding: 30px 0;
+        background-color: transparent;
+        color: white;
+    }
+    .nav-wrap ul {
+        margin: 0;
+        padding: 0;
+    }
+    .active {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        transform: translate(0px, 0px);
+        transform: scale(1);
+        position: absolute;
+        z-index: -1;
+    }
+    #vpis-nav-mobile{
+        background-color: var(--main-red);
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+    .navigation {
+        display: none;
+    }
+    .navigationTwo {
+        display: block;
+    }
     .styles, .schedule1, .schedule_2, .teachers, .about-us{
         padding-bottom: 10%;
     }
@@ -679,69 +780,6 @@ footer .ut-logo{
     }
 }
 @media screen and (max-width: 670px) {
-    /*----NAVIGATION MOBILE---*/
-    .navigation-toggle .fa-bars, .navigation-toggle .fa-times {
-        display: block;
-        margin-top: 13px;
-    }
-    .buffer {
-        display: none;
-    }
-    .navigation a:hover, .navigationTwo a:hover{
-        background-color: var(--main-red);
-        color: white;
-        border: none;
-        border-radius: 100px;
-        padding: 5px 10px;
-    }
-    .navigation a:hover, .navigationTwo a:hover{
-        padding: 30px 0;
-        background-color: transparent;
-        color: white;
-    }
-    .navigation, .navigationTwo {
-        opacity: 0;
-        visibility: hidden;
-        transform: translate(0px, -390px);
-        position: absolute;
-        top: 74px;
-        width: 100%;
-        transition: transform 100ms linear;
-    }
-    .navigation, .navigationTwo {
-        background-color: rgba(224, 26, 26, 0.9);
-    }
-    .navigation li, .navigationTwo li {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin-right: 0;
-        border-bottom: 1px solid var(--main-red);
-    }
-    .navigation li a, .navigationTwo li a {
-        padding: 30px 0;
-        background-color: transparent;
-        color: white;
-    }
-    .nav-wrap ul {
-        margin: 0;
-        padding: 0;
-    }
-    .active {
-        display: block;
-        visibility: visible;
-        opacity: 1;
-        transform: translate(0px, 0px);
-        transform: scale(1);
-        position: absolute;
-        z-index: -1;
-    }
-    .navigation {
-        display: none;
-    }
-    .navigationTwo {
-        display: block;
-    }
     .social {
         display: grid !important;
         grid-template-columns: repeat(3,1fr);

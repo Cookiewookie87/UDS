@@ -114,6 +114,8 @@ function scrollPage() {
     const title3Pos = title3.top - 1;
     const title4 = navAnchor[3].getBoundingClientRect();
     const title4Pos = title4.top - 1;
+    const title5 = navAnchor[4].getBoundingClientRect();
+    const title5Pos = title5.top - 1;
 
     if (title1Pos > nav.clientHeight) { 
         navLinks.forEach(link => link.classList.remove("navBtn-active"));
@@ -130,9 +132,13 @@ function scrollPage() {
         navLinks.forEach(link => link.classList.remove("navBtn-active"));
         navLinks[2].classList.add("navBtn-active");
     }
-    if (title4Pos <= nav.clientHeight) { 
+    if (title4Pos <= nav.clientHeight && title5Pos > nav.clientHeight) { 
         navLinks.forEach(link => link.classList.remove("navBtn-active"));
         navLinks[3].classList.add("navBtn-active");
+    }
+    if (title5Pos <= nav.clientHeight) { 
+        navLinks.forEach(link => link.classList.remove("navBtn-active"));
+        navLinks[4].classList.add("navBtn-active");
     }
 }
 
