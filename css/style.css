@@ -270,7 +270,7 @@ nav{
 }
 .schedule_wrap {
     display: grid;
-    grid-template-columns: repeat(6, minmax(10%, 1fr));
+    grid-template-columns: repeat(5, minmax(10%, 1fr));
     padding: 20px 20px 60px 20px;
     position: relative;
     z-index: 2;
@@ -489,7 +489,7 @@ footer .ut-logo{
     .timetable{
         padding: 0 20px;
     }
-    .sobota .timetable:last-child{
+    .petek .timetable:last-child{
         border-bottom: none;
     }
     .hour {
