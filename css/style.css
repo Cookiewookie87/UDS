@@ -139,17 +139,37 @@ nav{
 .img-wrap {
     width: 100%;
     height: 100vh;
+    background-color: black;
+    position: relative;
 }
 .carouselImg {
-    height: 100%; 
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    transition: 500ms cubic-bezier(1, 0.03, 0.66, 1.01);
-    -o-transition: 500ms cubic-bezier(1, 0.03, 0.66, 1.01);
-    -moz-transition: 500ms cubic-bezier(1, 0.03, 0.66, 1.01);
-    -webkit-transition: 500ms cubic-bezier(1, 0.03, 0.66, 1.01);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    transition: 300ms cubic-bezier(1, 0.03, 0.66, 1.01);
+    -o-transition: 300ms cubic-bezier(1, 0.03, 0.66, 1.01);
+    -moz-transition: 300ms cubic-bezier(1, 0.03, 0.66, 1.01);
+    -webkit-transition: 300ms cubic-bezier(1, 0.03, 0.66, 1.01);
+}
+
+.pic-caption{
+    position: absolute;
+    top: 50%;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 30%;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    background-color: rgba(229, 45, 42, .8);
+    border-radius: 100px;
+    padding: 20px;
 }
 
 .prev, .next {
@@ -196,13 +216,6 @@ nav{
 .dot-active {
     background-color: white;
     transform: scale(1.2);
-}
-
-.carouselImg {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    opacity: 0;
 }
 
 .carouselImg--active {
