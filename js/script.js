@@ -30,7 +30,7 @@ const navAnchor = Array.from(document.querySelectorAll(".main-title"));
 
 // copy text
 const emailText = document.querySelector(".email");
-emailText.innerHTML = "&#100;&#97;&#110;&#99;&#101;&#115;&#116;&#117;&#100;&#105;&#111;&#46;&#117;&#100;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;"
+emailText.innerHTML = "&#105;&#110;&#102;&#111;&#064;&#117;&#100;&#115;&#046;&#115;&#105;"
 
 // navigation functions
 function toggleNav() {
