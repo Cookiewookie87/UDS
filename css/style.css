@@ -158,18 +158,18 @@ nav{
 
 .pic-caption{
     position: absolute;
-    top: 50%;
+    top: 42%;
     left: 0; 
     right: 0; 
     margin-left: auto; 
     margin-right: auto; 
-    width: 30%;
+    width: 42%;
     font-size: 30px;
     color: white;
     text-align: center;
     background-color: rgba(229, 45, 42, .8);
     border-radius: 100px;
-    padding: 20px;
+    padding: 20px 40px;
 }
 
 .prev, .next {
@@ -511,6 +511,9 @@ footer .ut-logo{
 }
 
 @media(max-width:800px) {
+    .pic-caption{
+        padding: 20px 30px;
+    }
     .styles, .schedule1, .schedule_2, .teachers, .about-us{
         padding-bottom: 10%;
     }
@@ -741,6 +744,10 @@ footer .ut-logo{
     }
     .navigationTwo {
         display: block;
+    }
+    .pic-caption{
+        padding: 20px 30px;
+        font-size: 20px;
     }
     .social {
         display: grid !important;
