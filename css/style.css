@@ -158,12 +158,12 @@ nav{
 
 .pic-caption{
     position: absolute;
-    top: 50%;
+    top: 42%;
     left: 0; 
     right: 0; 
     margin-left: auto; 
     margin-right: auto; 
-    width: 30%;
+    width: 35%;
     font-size: 30px;
     color: white;
     text-align: center;
@@ -511,6 +511,9 @@ footer .ut-logo{
 }
 
 @media(max-width:800px) {
+    .pic-caption {
+        width: 42%;
+    }
     .styles, .schedule1, .schedule_2, .teachers, .about-us{
         padding-bottom: 10%;
     }
