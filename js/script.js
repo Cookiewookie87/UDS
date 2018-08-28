@@ -193,5 +193,3 @@ gestureZone.addEventListener('touchend', function(event) {
     touchendY = event.changedTouches[0].screenY;
     handleGesture();
 }, false);
-
-

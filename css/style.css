@@ -132,7 +132,6 @@ nav{
     border-radius: 100px;
     padding: 7px 15px;
 }
-
 /*********************************
 ----PICTURE CAROUSEL----
 *********************************/
@@ -155,7 +154,6 @@ nav{
     -moz-transition: 300ms cubic-bezier(1, 0.03, 0.66, 1.01);
     -webkit-transition: 300ms cubic-bezier(1, 0.03, 0.66, 1.01);
 }
-
 .pic-caption{
     position: absolute;
     top: 42%;
@@ -171,7 +169,6 @@ nav{
     border-radius: 100px;
     padding: 20px 40px;
 }
-
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -185,12 +182,10 @@ nav{
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
   }
-
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
-
 .prev:hover, .next:hover {
     background-color: rgba(224, 26, 26, 0.9);
 }
@@ -212,40 +207,22 @@ nav{
     display: inline-block;
     transition: background-color 0.6s ease;
 }
-
 .dot-active {
     background-color: white;
     transform: scale(1.2);
 }
-
 .carouselImg--active {
     opacity: 1;
 }
-
 .img0{
     background-image: url('../img/carousel/UDSspletna0_comp_1600.jpg');
 }
-
 .img1{
     background-image: url('../img/carousel/UDSspletna1_comp_1600.jpg');
 }
-
 .img2{
     background-image: url('../img/carousel/UDSspletna2_comp_1600.jpg');
 }
-
-.img3{
-    background-image: url('../img/carousel/UDSspletna3_comp_1600.jpg');
-}
-
-.img4{
-    background-image: url('../img/carousel/UDSspletna4_comp_1600.jpg');
-}
-
-.img5{
-    background-image: url('../img/carousel/UDSspletna5_comp_1600.jpg');
-}
-
 /*********************************
 ----DANCE STYLES----
 *********************************/
@@ -266,7 +243,6 @@ nav{
 .pic{
     height: 100%;
 }
-
 /*********************************
 ----SCHEDULE----
 *********************************/
@@ -281,7 +257,6 @@ nav{
 .schedule_2 {
     display: none;
 }
-
 .schedule_wrap {
     display: grid;
     grid-template-columns: repeat(5, minmax(10%, 1fr));
@@ -290,62 +265,50 @@ nav{
     z-index: 2;
 }
 .sch {
-    margin: 10px 5px;
+    margin: 5px;
     display: grid;
     align-items: center;
     justify-items: center;
     background-color: white;
     border-radius: 10px;
 }
-
 .sch_day{
     text-align: center;
     background: none;
     height: auto;
     border: none;
     color: white;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
 }
-
 .day_one, .day_two, .day_three, .day_four, .day_five{
     display: grid;
     grid-template-rows: repeat(5, minmax(10%, 1fr));
 }
-
 .sch_mladinci{
     grid-row: 4/5;
 }
-
 .sch_rekreativa{
     grid-row: 5/-1;
 }
-
 .day_two_mix{
     grid-row: 2/3;
 }
-
 .day_two_pionirji{
     grid-row: 3/4;
 }
-
 .day_two_clani{
     grid-row: 5/-1;
 }
-
 .day_four_pionirji, .day_five_mix2{
     grid-row: 3/4;
 }
-
 .day_four_mladinci, .day_five_rekreativa{
     grid-row: 4/5;
 }
-
 .day_four_clani, .day_five_balet3{
     grid-row: 5/-1;
 }
-
-
 .sch-class{
     font-weight: bold;
     font-size: 18px;
@@ -375,7 +338,6 @@ nav{
 .schedule_2 h2 {
     color: var(--main-red);
 }
-
 /*********************************
 ----EKIPA----
 *********************************/
@@ -418,7 +380,6 @@ nav{
 .lead {
     grid-column: span 2;
 }
-
 /*********************************
 ----ABOUT US----
 *********************************/
@@ -477,7 +438,6 @@ nav{
 .map{
     margin: 0 20px;
 }
-
 /*********************************
 ----FOOTER----
 *********************************/
@@ -513,7 +473,6 @@ footer .ut-logo{
     width: 24px;
     height: auto;
 }
-
 /*********************************
 ----MEDIA QUERIES----
 *********************************/
@@ -550,7 +509,6 @@ footer .ut-logo{
         margin: 16px 0;
     }
 }
-
 @media(max-width:800px) {
     .pic-caption{
         padding: 20px 30px;
@@ -561,25 +519,11 @@ footer .ut-logo{
     .img0{
         background-image: url('../img/carousel/UDSspletna0_comp_800.jpg');
     }
-    
     .img1{
         background-image: url('../img/carousel/UDSspletna1_comp_800.jpg');
     }
-    
     .img2{
         background-image: url('../img/carousel/UDSspletna2_comp_800.jpg');
-    }
-    
-    .img3{
-        background-image: url('../img/carousel/UDSspletna3_comp_800.jpg');
-    }
-    
-    .img4{
-        background-image: url('../img/carousel/UDSspletna4_comp_800.jpg');
-    }
-    
-    .img5{
-        background-image: url('../img/carousel/UDSspletna5_comp_800.jpg');
     }
     .style{
         display: grid;
