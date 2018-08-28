@@ -363,7 +363,6 @@ nav{
 .timetable{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 10px);
     border-bottom: 1px solid rgba(220, 220, 220, 0.5);
 }
 .dance_style{
