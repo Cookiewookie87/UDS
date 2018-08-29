@@ -15,11 +15,8 @@ let currentIndex = 0;
 const dot0 = document.querySelector(".dot-0");
 const dot1 = document.querySelector(".dot-1");
 const dot2 = document.querySelector(".dot-2");
-const dot3 = document.querySelector(".dot-3");
-const dot4 = document.querySelector(".dot-4");
-const dot5 = document.querySelector(".dot-5");
 const dots = Array.from(document.querySelectorAll(".dot"));
-const imgIntervalSpeed = 600000;
+const imgIntervalSpeed = 5000;
 let interval = setInterval(nextImgShow, imgIntervalSpeed);
 
 // navigation anchor scroll
@@ -28,7 +25,7 @@ const navLinks = Array.from(document.querySelectorAll(".navigation a"));
 const navLinksTwo = Array.from(document.querySelectorAll(".navigationTwo .scroll_anchor"));
 const navAnchor = Array.from(document.querySelectorAll(".main-title"));
 
-// copy text
+// email encode
 const emailText = document.querySelector(".email");
 emailText.innerHTML = "&#105;&#110;&#102;&#111;&#064;&#117;&#100;&#115;&#046;&#115;&#105;"
 
@@ -196,5 +193,3 @@ gestureZone.addEventListener('touchend', function(event) {
     touchendY = event.changedTouches[0].screenY;
     handleGesture();
 }, false);
-
-

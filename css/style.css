@@ -44,7 +44,7 @@ h1, h2 {
     transform: scaleY(-1);
     z-index: 1;
 }
-.style .content, .teacher .teacher-desc, .teacher .vodstvo-desc, .about-us .info{
+.style .content, .team .team-member-desc, .team .vodstvo-desc, .about-us .info{
     text-align: justify;
 }
 .buffer {
@@ -132,7 +132,6 @@ nav{
     border-radius: 100px;
     padding: 7px 15px;
 }
-
 /*********************************
 ----PICTURE CAROUSEL----
 *********************************/
@@ -155,7 +154,6 @@ nav{
     -moz-transition: 300ms cubic-bezier(1, 0.03, 0.66, 1.01);
     -webkit-transition: 300ms cubic-bezier(1, 0.03, 0.66, 1.01);
 }
-
 .pic-caption{
     position: absolute;
     top: 42%;
@@ -171,7 +169,6 @@ nav{
     border-radius: 100px;
     padding: 20px 40px;
 }
-
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -185,12 +182,10 @@ nav{
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
   }
-
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
-
 .prev:hover, .next:hover {
     background-color: rgba(224, 26, 26, 0.9);
 }
@@ -212,40 +207,22 @@ nav{
     display: inline-block;
     transition: background-color 0.6s ease;
 }
-
 .dot-active {
     background-color: white;
     transform: scale(1.2);
 }
-
 .carouselImg--active {
     opacity: 1;
 }
-
 .img0{
     background-image: url('../img/carousel/UDSspletna0_comp_1600.jpg');
 }
-
 .img1{
     background-image: url('../img/carousel/UDSspletna1_comp_1600.jpg');
 }
-
 .img2{
     background-image: url('../img/carousel/UDSspletna2_comp_1600.jpg');
 }
-
-.img3{
-    background-image: url('../img/carousel/UDSspletna3_comp_1600.jpg');
-}
-
-.img4{
-    background-image: url('../img/carousel/UDSspletna4_comp_1600.jpg');
-}
-
-.img5{
-    background-image: url('../img/carousel/UDSspletna5_comp_1600.jpg');
-}
-
 /*********************************
 ----DANCE STYLES----
 *********************************/
@@ -266,7 +243,6 @@ nav{
 .pic{
     height: 100%;
 }
-
 /*********************************
 ----SCHEDULE----
 *********************************/
@@ -281,7 +257,6 @@ nav{
 .schedule_2 {
     display: none;
 }
-
 .schedule_wrap {
     display: grid;
     grid-template-columns: repeat(5, minmax(10%, 1fr));
@@ -290,48 +265,42 @@ nav{
     z-index: 2;
 }
 .sch {
-    margin: 10px 5px;
+    margin: 5px;
     display: grid;
     align-items: center;
     justify-items: center;
     background-color: white;
     border-radius: 10px;
 }
-
 .sch_day{
     text-align: center;
     background: none;
     height: auto;
     border: none;
     color: white;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
 }
-
 .day_one, .day_two, .day_three, .day_four, .day_five{
     display: grid;
     grid-template-rows: repeat(5, minmax(10%, 1fr));
 }
-
 .sch_mladinci{
     grid-row: 4/5;
 }
-
 .sch_rekreativa{
     grid-row: 5/-1;
 }
-
 .day_two_mix{
     grid-row: 2/3;
 }
-
 .day_two_pionirji{
     grid-row: 3/4;
 }
-
 .day_two_clani{
     grid-row: 5/-1;
 }
+<<<<<<< HEAD
 
 .day_three_jazz1{
     grid-row: 4/5;
@@ -341,25 +310,23 @@ nav{
     grid-row: 5/-1;
 }
 
+=======
+>>>>>>> bdf8fc534c4c6cb5b2706b568e480d0c12176962
 .day_four_pionirji, .day_five_mix2{
     grid-row: 3/4;
 }
-
 .day_four_mladinci, .day_five_rekreativa{
     grid-row: 4/5;
 }
-
 .day_four_clani, .day_five_balet3{
     grid-row: 5/-1;
 }
-
-
 .sch-class{
     font-weight: bold;
     font-size: 18px;
     margin: 20px 0 0 0;
 }
-.teacher {
+.teacher, .class-age {
     font-size: 14px;
     margin: 5px 0 0 0;
 }
@@ -371,7 +338,6 @@ nav{
 .timetable{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 10px);
     border-bottom: 1px solid rgba(220, 220, 220, 0.5);
 }
 .dance_style{
@@ -384,34 +350,33 @@ nav{
 .schedule_2 h2 {
     color: var(--main-red);
 }
-
 /*********************************
 ----EKIPA----
 *********************************/
-.teachers{
+.team-wrap{
     display: grid;
     grid-template-columns: repeat(2, minmax(10%, 1fr));
     text-align: center;
     grid-gap: 2.5%;
 }
-.teacher {
+.team {
     margin-bottom: 15%;
 }
-.teacher-desc{
+.team-member-desc{
     margin-bottom: 6px;
 }
-.teacher-social{
+.team-member-social{
     text-align: center;
 }
-.teacher-social a{
+.team-member-social a{
     color: var(--main-red);
     font-size: 2em;
     margin-right: 20px;
 }
-.teacher-social a:last-child{
+.team-member-social a:last-child{
     margin-right: 0;
 }
-.teacher-name, .vodstvo-name{
+.team-member-name, .vodstvo-name{
     font-size: 1.5em;
     margin: 2% 0 0 0;
 }
@@ -427,7 +392,6 @@ nav{
 .lead {
     grid-column: span 2;
 }
-
 /*********************************
 ----ABOUT US----
 *********************************/
@@ -486,7 +450,6 @@ nav{
 .map{
     margin: 0 20px;
 }
-
 /*********************************
 ----FOOTER----
 *********************************/
@@ -522,7 +485,6 @@ footer .ut-logo{
     width: 24px;
     height: auto;
 }
-
 /*********************************
 ----MEDIA QUERIES----
 *********************************/
@@ -559,36 +521,21 @@ footer .ut-logo{
         margin: 16px 0;
     }
 }
-
 @media(max-width:800px) {
     .pic-caption{
         padding: 20px 30px;
     }
-    .styles, .schedule1, .schedule_2, .teachers, .about-us{
+    .styles, .schedule1, .schedule_2, .team-wrap, .about-us{
         padding-bottom: 10%;
     }
     .img0{
         background-image: url('../img/carousel/UDSspletna0_comp_800.jpg');
     }
-    
     .img1{
         background-image: url('../img/carousel/UDSspletna1_comp_800.jpg');
     }
-    
     .img2{
         background-image: url('../img/carousel/UDSspletna2_comp_800.jpg');
-    }
-    
-    .img3{
-        background-image: url('../img/carousel/UDSspletna3_comp_800.jpg');
-    }
-    
-    .img4{
-        background-image: url('../img/carousel/UDSspletna4_comp_800.jpg');
-    }
-    
-    .img5{
-        background-image: url('../img/carousel/UDSspletna5_comp_800.jpg');
     }
     .style{
         display: grid;
@@ -663,7 +610,7 @@ footer .ut-logo{
         grid-area: j;
         grid-column: span 2;
     }
-    .teachers{
+    .team-wrap{
         display: grid;
         grid-template-areas: 
         "k"
@@ -680,31 +627,31 @@ footer .ut-logo{
         grid-area: k;
         grid-column: span 2;
     }
-    .teacher1{
+    .team-member-1{
         grid-area: l;
         grid-column: span 2;
     }
-    .teacher2{
+    .team-member-2{
         grid-area: m;
         grid-column: span 2;
     }
-    .teacher3{
+    .team-member-3{
         grid-area: n;
         grid-column: span 2;
     }
-    .teacher4{
+    .team-member-4{
         grid-area: o;
         grid-column: span 2;
     }
-    .teacher5{
+    .team-member-5{
         grid-area: p;
         grid-column: span 2;
     }
-    .teacher6{
+    .team-member-6{
         grid-area: r;
         grid-column: span 2;
     }
-    .teacher7{
+    .team-member-7{
         grid-area: s;
         grid-column: span 2;
     }
@@ -720,12 +667,9 @@ footer .ut-logo{
     .video-container{
         margin: 0 0 5% 0;
     }
-    .teacher-desc{
+    .team-member-desc{
         width: 70%;
         margin: 14px auto;
-    }
-    .teacher {
-        margin-bottom: 8%;
     }
     .map{
         margin: 0;
@@ -807,7 +751,7 @@ footer .ut-logo{
         color: white;
         font-size: 20px;
     }
-    .teacher-desc, .vodstvo-desc{
+    .team-member-desc, .vodstvo-desc{
         width: 100%;
     }
 }
