@@ -300,7 +300,6 @@ nav{
 .day_two_clani{
     grid-row: 5/-1;
 }
-<<<<<<< HEAD
 
 .day_three_jazz1{
     grid-row: 4/5;
@@ -310,8 +309,6 @@ nav{
     grid-row: 5/-1;
 }
 
-=======
->>>>>>> bdf8fc534c4c6cb5b2706b568e480d0c12176962
 .day_four_pionirji, .day_five_mix2{
     grid-row: 3/4;
 }
