@@ -333,6 +333,14 @@ nav{
     grid-row: 5/-1;
 }
 
+.day_three_jazz1{
+    grid-row: 4/5;
+}
+
+.day_three_jazz2{
+    grid-row: 5/-1;
+}
+
 .day_four_pionirji, .day_five_mix2{
     grid-row: 3/4;
 }
