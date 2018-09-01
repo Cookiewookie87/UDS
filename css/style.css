@@ -11,9 +11,18 @@ html, body {
     max-width: 1080px;
     margin: 0 auto;
 }
-h1, h2 {
+h1, h2, h3 {
     padding: 0;
     margin: 0;
+}
+h2{
+    font-size: 2em;
+}
+h3{
+    font-size: 1.5em;
+}
+.nav-wrap h1{
+    display: none;
 }
 .title-wrap{
     width: 100%;
@@ -30,7 +39,7 @@ h1, h2 {
     text-align: center;
     grid-column: span 2;
     color: var(--main-red);
-    padding: 7% 0;
+    padding: 0 0 7% 0;
 }
 #dance-style-line, #schedule-line {
     position: absolute;
@@ -344,7 +353,7 @@ nav{
     display: grid;
     justify-content: end;
 }
-.schedule_2 h2 {
+.schedule_2 h3 {
     color: var(--main-red);
 }
 /*********************************
@@ -355,6 +364,7 @@ nav{
     grid-template-columns: repeat(2, minmax(10%, 1fr));
     text-align: center;
     grid-gap: 2.5%;
+    padding-top: 10%;
 }
 .team {
     margin-bottom: 15%;
@@ -498,7 +508,7 @@ footer .ut-logo{
         padding-bottom: 5%;
     }
 
-    .schedule_2 h2{
+    .schedule_2 h3{
         padding: 4% 20px 0 20px;
         margin-bottom: 5px;
     }
@@ -550,14 +560,8 @@ footer .ut-logo{
         "i"
         "j";
     }
-    .style .content h2 {
-        margin-top: 100px;
-    }
-    .poroke .content h2 {
-        margin-top: 30px;
-    }
-    .content h2 {
-        width: auto;
+    .style .content{
+        padding-top: 10%;
     }
     .poroke .content {
         grid-area: p1;
