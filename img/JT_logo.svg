@@ -1,15 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="42.115px" height="29.714px" viewBox="0 0 42.115 29.714" enable-background="new 0 0 42.115 29.714" xml:space="preserve">
-<polygon fill="#FFFFFF" points="13.674,23.782 13.674,17.824 13.674,0.552 18.127,3.891 18.127,17.755 18.127,20.493 "/>
-<polygon fill="#FFFFFF" points="13.691,0.772 18.127,3.908 18.127,6.54 13.674,6.593 "/>
-<polygon fill="#FFFFFF" points="15.465,0 6.425,2.748 9.035,6.609 18.116,3.841 "/>
-<polygon fill="#FFFFFF" points="18.127,20.493 13.674,23.77 13.674,17.824 18.127,17.755 "/>
-<polygon fill="#FFFFFF" points="2.635,15.677 18.127,20.505 13.674,23.782 0.001,19.521 "/>
-<polygon fill="#FFFFFF" points="21.108,27.638 21.606,9.494 26.086,8.545 25.531,28.831 "/>
-<polygon fill="#FFFFFF" points="41.675,8.86 0,19.514 0.135,15.015 42.115,4.151 "/>
-<polygon fill="#FFFFFF" points="21.282,21.315 25.765,20.259 25.625,27.879 21.009,27.755 "/>
-<polygon fill="#FFFFFF" points="21.012,27.753 30.58,16.29 33.025,20.06 24.986,29.714 "/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg enable-background="new 0 0 42.115 29.714" version="1.1" viewBox="0 0 42.115 29.714" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<polygon points="13.674 23.782 13.674 17.824 13.674 0.552 18.127 3.891 18.127 17.755 18.127 20.493" fill="#fff"/>
+<polygon points="13.691 0.772 18.127 3.908 18.127 6.54 13.674 6.593" fill="#fff"/>
+<polygon points="15.465 0 6.425 2.748 9.035 6.609 18.116 3.841" fill="#fff"/>
+<polygon points="18.127 20.493 13.674 23.77 13.674 17.824 18.127 17.755" fill="#fff"/>
+<polygon points="2.635 15.677 18.127 20.505 13.674 23.782 1e-3 19.521" fill="#fff"/>
+<polygon points="21.108 27.638 21.606 9.494 26.086 8.545 25.531 28.831" fill="#fff"/>
+<polygon points="41.675 8.86 0 19.514 0.135 15.015 42.115 4.151" fill="#fff"/>
+<polygon points="21.282 21.315 25.765 20.259 25.625 27.879 21.009 27.755" fill="#fff"/>
+<polygon points="21.012 27.753 30.58 16.29 33.025 20.06 24.986 29.714" fill="#fff"/>
 </svg>
