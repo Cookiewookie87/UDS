@@ -41,14 +41,14 @@ h3{
     color: var(--main-red);
     padding: 0 0 7% 0;
 }
-#dance-style-line, #schedule-line {
+.line-left, .line-right {
     position: absolute;
     fill: var(--main-red);
 }
-#dance-style-line {
+.line-left {
     top: 99%;
 }
-#schedule-line {
+.line-right {
     top: 98%;
     transform: scaleY(-1);
     z-index: 1;
@@ -224,13 +224,13 @@ nav{
     opacity: 1;
 }
 .img0{
-    background-image: url('../img/carousel/UDSspletna0_comp_1600.jpg');
+    background-image: url('../img/carousel/UDSspletna0-comp-1600.jpg');
 }
 .img1{
-    background-image: url('../img/carousel/UDSspletna1_comp_1600.jpg');
+    background-image: url('../img/carousel/UDSspletna1-comp-1600.jpg');
 }
 .img2{
-    background-image: url('../img/carousel/UDSspletna2_comp_1600.jpg');
+    background-image: url('../img/carousel/UDSspletna2-comp-1600.jpg');
 }
 /*********************************
 ----DANCE STYLES----
@@ -256,7 +256,7 @@ nav{
 ----SCHEDULE----
 *********************************/
 .schedule1 {
-    background-image: url('../img/UDS_bg_1600.jpg');
+    background-image: url('../img/UDS-bg-1600.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -420,7 +420,8 @@ nav{
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+    height: 100%;
+    border: none;
 }
 .info p{
     margin: 0 20px;
@@ -456,6 +457,11 @@ nav{
 }
 .map{
     margin: 0 20px;
+}
+.map iframe{
+    border: none;
+    width: 100%; 
+    height: 450px;
 }
 /*********************************
 ----FOOTER----
@@ -536,13 +542,13 @@ footer .ut-logo{
         padding-bottom: 10%;
     }
     .img0{
-        background-image: url('../img/carousel/UDSspletna0_comp_800.jpg');
+        background-image: url('../img/carousel/UDSspletna0-comp-800.jpg');
     }
     .img1{
-        background-image: url('../img/carousel/UDSspletna1_comp_800.jpg');
+        background-image: url('../img/carousel/UDSspletna1-comp-800.jpg');
     }
     .img2{
-        background-image: url('../img/carousel/UDSspletna2_comp_800.jpg');
+        background-image: url('../img/carousel/UDSspletna2-comp-800.jpg');
     }
     .style{
         display: grid;
