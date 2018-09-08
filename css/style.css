@@ -363,7 +363,7 @@ nav{
     display: grid;
     grid-template-columns: repeat(2, minmax(10%, 1fr));
     text-align: center;
-    grid-gap: 2.5%;
+    /*grid-gap: 2.5%;*/
     padding-top: 10%;
 }
 .team {
